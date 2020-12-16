@@ -7,7 +7,7 @@
 
 * With the input of our TomorrowDevs (an online incubator for future web developers) mentors we created a Responsive Web App that allows the user to load one or more photos from his / her laptop or phone 
 
-# How did we created the web app?
+# How did we create the web app?
 
 # What technologies did we use?
 
