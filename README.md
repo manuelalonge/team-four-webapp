@@ -18,7 +18,7 @@
 * We used a Jitsi room for our calls, however, in the spirit of **AGILE METHODOLOGY** we tried to keep all the communications as asynchrounous as possible
 * A Google Sheet was used to manage our daily stand-ups and keep communications asynchronous
 
-# What were the projects biggest challenges and how did we overcome them?
+# What were the project's biggest challenges and how did we overcome them?
 
 # Meet the team
 
