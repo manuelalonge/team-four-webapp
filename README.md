@@ -5,7 +5,11 @@
 
 # What did we do?
 
-* With the input of our TomorrowDevs (an online incubator for future web developers) mentors we created a Responsive Web App that allows the user to load one or more photos from his / her laptop or phone 
+* With the input of our TomorrowDevs mentors we created a Responsive Web App that allows the user to load one or more photos from his / her laptop or phone
+
+# More about TomorrowDevs mentorship
+
+https://www.tomorrowdevs.com/
 
 # How did we create the web app?
 
@@ -34,10 +38,6 @@
 * Francesco Di Bella
 * Roberta Ruggiero 
 * Mauro Tomasoni
-
-# More about TomorrowDevs mentorship
-
-https://www.tomorrowdevs.com/
 
 # Deployment link
 
