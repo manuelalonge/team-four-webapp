@@ -1,5 +1,14 @@
-dist/
+# Ignore Mac system files
+.DS_store
 
-node_modules/
+# Ignore node_modules folder
+node_modules
 
-logs/
+# Ignore all text files
+*.txt
+
+# Ignore files related to API keys
+.env
+
+# Ignore SASS config files
+.sass-cache
