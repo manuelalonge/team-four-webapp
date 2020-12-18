@@ -1,0 +1,33 @@
+{
+    "name": "team-four-webapp",
+    "version": "1.0.0",
+    "description": "Team Four TomorrowDevs Responsive Web App",
+    "main": "index.js",
+    "scripts": {
+        "test": "test",
+        "start": "webpack & npm run server",
+        "server": "live-server --host=localhost"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/manuelalonge/team-four-webapp.git"
+    },
+    "keywords": [
+        "team",
+        "four"
+    ],
+    "author": "Manuel Alonge",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/manuelalonge/team-four-webapp/issues"
+    },
+    "homepage": "https://github.com/manuelalonge/team-four-webapp#readme",
+    "devDependencies": {
+        "@babel/core": "^7.12.10",
+        "@babel/preset-env": "^7.12.11",
+        "babel-loader": "^8.2.2",
+        "live-server": "^1.2.1",
+        "webpack": "^5.11.0",
+        "webpack-cli": "^4.2.0"
+    }
+}
