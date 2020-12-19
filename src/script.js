@@ -14,7 +14,6 @@ function selectImage() {
         reader.addEventListener("load", loadImage);
         reader.readAsDataURL(image);
     }
-    console.log(imagesContainer.children.length);
 }
         
 function loadImage() {
