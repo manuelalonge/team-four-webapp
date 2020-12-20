@@ -17,6 +17,7 @@ https://www.tomorrowdevs.com/
 
 # What working methodology and tools did we use?
 
+* We used a Figma's prototype to have a template to stick to. Link: https://bit.ly/3pamv5s
 * We worked through **AGILE METHODOLOGY**. Each task was created as an issue of Github and reported onto a Github Projects board linked to the repository.
 * We tracked time spent on the activities with Toggl tracker
 * We used a Jitsi room for our calls, however, in the spirit of **AGILE METHODOLOGY** we tried to keep all the communications as asynchrounous as possible
@@ -42,6 +43,3 @@ https://www.tomorrowdevs.com/
 # Deployment link
 
 https://team4-tomorrowdevs-webapp.netlify.app
-
-
-
