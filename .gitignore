@@ -106,6 +106,5 @@ dist
 
 
 # Webpack files
-package-lock.json
 package.json
 
