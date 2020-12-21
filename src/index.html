@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="./assets/scss/pages/login.css">
 </head>
 
 <body>
@@ -19,12 +18,15 @@
         </div>
         <div class="login-section__form">
             <form class="login-form" action="#">
-                <label class="login-section__labels" for="username">Username</label>
-                <input type="text" class="login-section__input" id="username" name="username" placeholder="Insert here your username"><br>
 
-                <label class="login-section__labels" for="password">Password</label>
-                <input type="text" class="login-section__input" id="password" name="password" placeholder="Insert here your password"><br>
-
+                <div class="login-form__username">
+                    <label class="login-section__labels" for="username">Username</label>
+                    <input type="text" class="login-section__input" id="username" name="username" placeholder="Insert here your username">
+                </div>
+                <div class="login-form__password">
+                    <label class="login-section__labels" for="password">Password</label>
+                    <input type="text" class="login-section__input" id="password" name="password" placeholder="Insert here your password">
+                </div>
                 <input class="login-section__button" type="submit" value="Sign in">
             </form>
         </div>
