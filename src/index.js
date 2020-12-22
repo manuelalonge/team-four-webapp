@@ -1,6 +1,8 @@
+import "./styles.scss";
+
 /* Images Upload Functions */
 
-const inputImage = document.querySelector("#images-upload");
+const inputImage = document.querySelector(".images-upload");
 const imagesContainer = document.querySelector(".load-images-gallery__images-container");
 
 (function init() {
@@ -31,8 +33,7 @@ function loadImage() {
 /* Slider Functions*/
 
 const buttons = document.querySelectorAll(".icons");
-const testimonials = document.querySelectorAll(".testimonials");
-const testimonialLetters = document.querySelector(".testimonialLetters");
+const testimonials = document.querySelectorAll(".slides");
 const totalTestimonials = testimonials.length;
 
 let current = 0;

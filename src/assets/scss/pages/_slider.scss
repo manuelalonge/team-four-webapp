@@ -1,0 +1,74 @@
+/* Slider Styles */
+
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/src/assets/fonts/lato.regular.woff2") format("woff2"), url("/src/assets/fonts/lato.regular.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Lato-bold";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/src/assets/fonts/lato.bold.woff2") format("woff2"), url("/src/assets/fonts/lato.bold.woff2") format("woff")
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0A223D;
+    margin: 0 65px;
+    font-family: 'Lato', sans-serif;
+}
+
+.main-wrapper {
+    position: relative;
+    top: 121px;
+    background-color: #146CBE;
+    margin-left: auto;
+    margin-right: auto;
+    width: 249px;
+    height: 262px;
+    border-radius: 10px;
+}
+
+.slides {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image {
+    position: relative;
+    width: 184px;
+    height: 163px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quote {
+    position: relative;
+    background-color: #146CBE;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    height: 10px;
+    p {
+        text-align: center;
+        font-size: 8px;
+    }
+}
+
+.buttons {
+    position: relative;
+}
+
+.icons {
+    width: 29px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 2560px) {}

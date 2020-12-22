@@ -17,63 +17,31 @@
     <meta property="og:locale" content="it_IT">
     <meta property="og:type" content="Web App">
     <meta property="og:image" content=".assets/images/open-graph-preview.png">
+    <link rel="stylesheet" href="./assets/scss/pages/_slider.scss">
     <title>PhotoMatch - Slider</title>
 </head>
 
 <body>
-    <div class="testimonialBackground">
+    <div class="main-wrapper">
         <div class="site-logo">
             <h1>PhotoMatch</h1>
         </div>
-        <div class="testimonialLetters">
-            <div id="testimonial" class="testimonials">
+        <div class="slider-container">
+            <div class="slides">
                 <div class="image">
-                    <div class="profileimg">
-                        <img src="" alt="">
-                    </div>
-                    <div class="backgroundImage">
-                        <img src="" alt="">
-                    </div>
-                </div>
-
-                <div class="text">
+                    <img src="assets/images/slider-img.png" alt="Slider Photo">
                     <div class="quote">
-                        <img src="" alt="">
+                        <p class="quote__text">Caption</p>
                     </div>
-                </div>
-                <div class="curve">
-                    <img src="" alt="">
-                </div>
-
-
-            </div>
-            <div id="testimonial2" class="testimonials">
-                <div class="image">
-                    <div class="profileimg">
-                        <img src="" alt="">
-                    </div>
-                    <div class="backgroundImage">
-                        <img src="" alt="">
-                    </div>
-                </div>
-
-                <div class="text">
-                    <div class="quote">
-                        <img src="" alt="">
-                    </div>
-                </div>
-                <div class="curve">
-                    <img src="" alt="">
                 </div>
             </div>
-
         </div>
         <div class="buttons">
-            <img class="icons" data-action="p" src="" alt="icon-prev">
-            <img class="icons" data-action="n" src="" alt="icon-next">
+            <img class="icons" data-action="p" src="assets/images/chevron-left.svg" alt="icon-prev">
+            <img class="icons" data-action="n" src="assets/images/chevron-right.svg" alt="icon-next">
         </div>
     </div>
-    <script src="./dist/main.js"></script>
+    <script src="../dist/main.js"></script>
 </body>
 
 </html>

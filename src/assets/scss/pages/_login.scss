@@ -1,26 +1,4 @@
-@font-face {
-    font-family: "Lato";
-    font-style: normal;
-    font-weight: 400;
-    src: url("/src/assets/fonts/lato.regular.woff2") format("woff2"), url("/src/assets/fonts/lato.regular.woff") format("woff")
-}
-
-@font-face {
-    font-family: "Lato-bold";
-    font-style: normal;
-    font-weight: 700;
-    src: url("/src/assets/fonts/lato.bold.woff2") format("woff2"), url("/src/assets/fonts/lato.bold.woff2") format("woff")
-}
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #0A223D;
-    margin: 0 65px;
-    font-family: Lato, Helvetica, sans-serif;
-}
+/* Login Styles*/
 
 .site-logo {
     color: #fff;
