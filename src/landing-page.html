@@ -18,18 +18,31 @@
     <meta property="og:type" content="Web App">
     <meta property="og:image" content="./images/open-graph-preview.png">
     <title>Document</title>
-
-    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 
 <body>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias voluptates eum nobis necessitatibus perferendis voluptate quae et sunt accusamus distinctio!</p>
+    <div class="load-images-gallery">
+        <label for="images-upload" class="load-images-gallery__upload">
+            Load from gallery
+        </label>
+        <input id="images-upload" type="file" />
+        <div class="load-images-gallery__images-container">
 
-    <div class="square_DragDrop">
-        <p>
-            Take a photo or choose it from your gallery
-        </p>
+            <div class="square_DragDrop">
+                <p>
+                    Take a photo or choose it from your gallery
+                </p>
+            </div>
+
+        </div>
+        <div id="btn_takePhoto">
+            <button>
+                Take a photo
+            </button>
+        </div>
     </div>
-
+    <script src="dist/main.js"></script>
 </body>
 
 </html>
