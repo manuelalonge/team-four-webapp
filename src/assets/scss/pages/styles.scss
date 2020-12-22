@@ -3,14 +3,9 @@
 }
 
 body {
-    width: 95%;
-    height: 100vh;
-    background: rgb(2, 118, 131);
-    background: linear-gradient(256deg, rgba(2, 118, 131, 0.7903536414565826) 0%, rgba(20, 9, 191, 1) 35%, rgba(102, 47, 189, 0.8995973389355743) 100%);
-}
-
-title {
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0A223D;
+    margin: 0 65px;
+    font-family: Lato, Helvetica, sans-serif;
 }
 
 @mixin flexCenter {
@@ -45,6 +40,34 @@ title {
         }
     }
 }
+
+
+/********Camera Button on Mobile - START***********/
+
+@media screen and (max-width: 768px) {
+    #btn_takePhoto {
+        @include flexCenter();
+        width: 100%;
+        padding: 2rem;
+        #btn_circle {
+            position: relative;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: #C4C4C4;
+            box-shadow: 0 0 0 15px #E5E5E5;
+        }
+    }
+}
+
+@media screen and (min-width: 770px) {
+    #btn_takePhoto {
+        display: none;
+    }
+}
+
+
+/********Camera Button on Mobile - END***********/
 
 #square_DragDrop {
     width: 50%;
