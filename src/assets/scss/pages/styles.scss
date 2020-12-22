@@ -49,12 +49,12 @@ body {
     position: relative;
     top: 29px;
     left: 33px;
-    color: $font-color;
-    font-size: $font-size;
+    color: white;
+    font-size: 18px;
 }
 
 .wrapper {
-    background-color: $secondary-color;
+    background-color: #146CBE;
     width: 249px;
     height: 262px;
     border-radius: 10px;
@@ -67,7 +67,7 @@ body {
     width: 184px;
     height: 163px;
     border-radius: 10px;
-    border: 1px solid $dark-color;
+    border: 1px solid black;
 }
 
 @media screen and (max-width: 1024px) {
