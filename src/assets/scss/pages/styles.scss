@@ -5,25 +5,22 @@
 body {
     width: 95%;
     height: 100vh;
-    background: rgb(2,118,131);
-    background: linear-gradient(256deg, rgba(2,118,131,0.7903536414565826) 0%, rgba(20,9,191,1) 35%, rgba(102,47,189,0.8995973389355743) 100%); 
+    background: rgb(2, 118, 131);
+    background: linear-gradient(256deg, rgba(2, 118, 131, 0.7903536414565826) 0%, rgba(20, 9, 191, 1) 35%, rgba(102, 47, 189, 0.8995973389355743) 100%);
 }
-
 
 title {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
 @mixin flexCenter {
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 
-
 @media screen and (max-width: 2560px) {
-    #btn_takePhoto {        
+    #btn_takePhoto {
         @include flexCenter();
         width: 100%;
         padding: 2rem;
@@ -41,7 +38,6 @@ title {
     }
 }
 
-
 @media screen and (max-width: 320px) {
     #btn_takePhoto {
         button {
@@ -49,4 +45,3 @@ title {
         }
     }
 }
-
