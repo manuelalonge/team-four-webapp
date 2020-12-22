@@ -1,3 +1,17 @@
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/src/assets/fonts/lato.regular.woff2") format("woff2"), url("/src/assets/fonts/lato.regular.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Lato-bold";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/src/assets/fonts/lato.bold.woff2") format("woff2"), url("/src/assets/fonts/lato.bold.woff2") format("woff")
+}
+
 * {
     box-sizing: border-box;
 }
@@ -12,6 +26,57 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#square_DragDrop {
+    width: 50%;
+    padding: 15%;
+    background-color: #0a223d;
+    ;
+    border: 7px dashed #fff;
+    border-radius: 10px;
+    p {
+        color: #fff;
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+
+/* Slider Styles */
+
+.header {
+    position: relative;
+    top: 29px;
+    left: 33px;
+    color: $font-color;
+    font-size: $font-size;
+}
+
+.wrapper {
+    background-color: $secondary-color;
+    width: 249px;
+    height: 262px;
+    border-radius: 10px;
+}
+
+.slider-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 37px;
+    width: 184px;
+    height: 163px;
+    border-radius: 10px;
+    border: 1px solid $dark-color;
+}
+
+@media screen and (max-width: 1024px) {
+    .load-images-gallery__upload {
+        display: none;
+    }
+    #images-upload {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 2560px) {
@@ -68,26 +133,3 @@ body {
 
 
 /********Camera Button on Mobile - END***********/
-
-#square_DragDrop {
-    width: 50%;
-    padding: 15%;
-    background-color: #0a223d;
-    ;
-    border: 7px dashed #fff;
-    border-radius: 10px;
-    p {
-        color: #fff;
-        font-size: 24px;
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .load-images-gallery__upload {
-        display: none;
-    }
-    #images-upload {
-        display: none;
-    }
-}
