@@ -17,35 +17,36 @@
     <meta property="og:locale" content="it_IT">
     <meta property="og:type" content="Web App">
     <meta property="og:image" content=".assets/images/open-graph-preview.png">
-    <title>PhotoMatch - Login</title>
+    <title>Document</title>
 </head>
 
 <body>
     <div class="site-logo">
         <h1>PhotoMatch</h1>
     </div>
-    <div class="login-section">
-        <div class="login-section__title">
-            <h3>Welcome!</h3>
-            <p>Sign in to continue</p>
-        </div>
-        <div class="login-section__form">
-            <form class="login-form" action="#">
-                <label class="login-section__labels" for="username">Username</label>
-                <input type="text" class="login-section__input" id="username" name="username" placeholder="Insert here your username"><br>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias voluptates eum nobis necessitatibus perferendis voluptate quae et sunt accusamus distinctio!</p>
+    <div class="load-images-gallery">
+        <label for="images-upload" class="load-images-gallery__upload">
+            Load from gallery
+        </label>
+        <input id="images-upload" type="file" />
+        <div class="load-images-gallery__images-container">
 
-                <label class="login-section__labels" for="password">Password</label>
-                <input type="text" class="login-section__input" id="password" name="password" placeholder="Insert here your password"><br>
+            <div id="square_DragDrop">
+                <p>
+                    Click here to upload your photos <br> or <br> just drag & drop
+                </p>
+            </div>
 
-                <input class="login-section__button" type="submit" value="Sign in">
-            </form>
-        </div>
-    </div>
-    <div class="how-it-works">
-        <div class="how-it-works__title">
-        </div>
-        <div class="how-it-works__image-preview">
+            <p>
+                Take a photo or choose it from your gallery
+            </p>
 
+        </div>
+        <div id="btn_takePhoto">
+            <div id="btn_circle">
+
+            </div>
         </div>
     </div>
     <script src="dist/main.js"></script>
