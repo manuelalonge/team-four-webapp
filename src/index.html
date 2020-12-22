@@ -3,13 +3,40 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="./assets/scss/pages/login.css">
 </head>
 
 <body>
+    <div class="site-logo">
+        <h1>PhotoMatch</h1>
+    </div>
+    <div class="login-section">
+        <div class="login-section__title">
+            <h3>Welcome!</h3>
+            <p>Sign in to continue</p>
+        </div>
+        <div class="login-section__form">
+            <form class="login-form" action="#">
+                <label class="login-section__labels" for="username">Username</label>
+                <input type="text" class="login-section__input" id="username" name="username" placeholder="Insert here your username"><br>
 
+                <label class="login-section__labels" for="password">Password</label>
+                <input type="text" class="login-section__input" id="password" name="password" placeholder="Insert here your password"><br>
+
+                <input class="login-section__button" type="submit" value="Sign in">
+            </form>
+        </div>
+    </div>
+    <div class="how-it-works">
+        <div class="how-it-works__title">
+        </div>
+        <div class="how-it-works__image-preview">
+
+        </div>
+    </div>
+    <script src="dist/main.js"></script>
 </body>
-
-<script src="dist/main.js"></script>
 
 </html>
