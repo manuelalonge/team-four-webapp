@@ -5,7 +5,9 @@ body {
   font-family: Lato, Helvetica, sans-serif;
 }
 
-
+.login-page {
+    display:flex;
+}
 
 .site-logo {
   margin-top:100px;
@@ -104,3 +106,41 @@ body {
       }
   }
 } 
+
+.how-it-works {
+  margin-left:150px;
+  &__title {
+    color:#fff;
+    background-color:#146CBE;
+    height:120px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:30px;
+    margin-top:-50px;
+    width:500px;
+    border-radius:10px;
+    font-family: Lato-bold, Helvetica, sans-serif;
+    font-size:16px;
+  }
+  &__image-preview {
+    background-image:url("/src/assets/images/cat-image.webp");
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:500px;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    p {
+      text-align: center;
+      background-color:#146CBE;
+      display:inline-block;
+      color:#fff;
+      padding:35px;
+      border-radius:10px;
+      font-size:16px;
+      width:300px;
+    }
+  }
+}
