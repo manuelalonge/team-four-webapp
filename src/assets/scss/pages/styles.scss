@@ -59,3 +59,12 @@ title {
         text-align: center;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .load-images-gallery__upload {
+        display: none;
+    }
+    #images-upload {
+        display: none;
+    }
+}
