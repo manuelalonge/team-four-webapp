@@ -1,4 +1,5 @@
 import './styles.scss';
+import './assets/scss/main.scss';
 
 /* Take a photo function */
 (function () {
@@ -260,4 +261,5 @@ function goSlide(change) {
     let newWidth = change * vw;
     testimonialLetters.style.transform = "translate(" + -newWidth + "px)";
 }
+
 
