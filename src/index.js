@@ -1,5 +1,4 @@
 import './styles.scss';
-import './assets/scss/main.scss';
 
 /* Take a photo function */
 (function () {
