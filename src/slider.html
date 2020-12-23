@@ -7,73 +7,50 @@
     <meta name="author" content="TEAM 4 - Tomorrowdevs" />
     <meta name="copyright" content="TEAM 4 - Tomorrowdevs" />
     <meta name="description" content="Responsive Web App - Collaborative project tomorrowdevs">
-    <meta name="keywords" content="social, facebook,linkedin,people,connecting people,relationz,
-                                    social application, Single page application, reminder,
-                                    relations between employes " />
-
+    <meta name="keywords" content="upload, photo upload, camera, photocamera, cloud" />
     <link rel="canonical" href="https://team4-tomorrowdevs-webapp.netlify.app/" />
     <meta property="og:title" content="Responsive Web App">
     <meta property="og:url" content="https://team4-tomorrowdevs-webapp.netlify.app/">
     <meta property="og:locale" content="it_IT">
     <meta property="og:type" content="Web App">
     <meta property="og:image" content=".assets/images/open-graph-preview.png">
+    <link rel="stylesheet" href="./assets/scss/pages/_slider.scss">
     <title>PhotoMatch - Slider</title>
 </head>
 
 <body>
-    <div class="testimonialBackground">
+    <div class="main-wrapper">
         <div class="site-logo">
             <h1>PhotoMatch</h1>
         </div>
-        <div class="testimonialLetters">
-            <div id="testimonial" class="testimonials">
-                <div class="image">
-                    <div class="profileimg">
-                        <img src="" alt="">
+        <div class="slider-wrapper">
+            <div class="image-bigger-wrapper">
+                <div class="image-wrapper">
+                    <div class="image">
+                        <img src="assets/images/slider-img.png" alt="Slider photo">
                     </div>
-                    <div class="backgroundImage">
-                        <img src="" alt="">
+                    <div class="result">
+                        <p>Result 1</p>
                     </div>
-                </div>
-
-                <div class="text">
-                    <div class="quote">
-                        <img src="" alt="">
-                    </div>
-                </div>
-                <div class="curve">
-                    <img src="" alt="">
-                </div>
-
-
-            </div>
-            <div id="testimonial2" class="testimonials">
-                <div class="image">
-                    <div class="profileimg">
-                        <img src="" alt="">
-                    </div>
-                    <div class="backgroundImage">
-                        <img src="" alt="">
-                    </div>
-                </div>
-
-                <div class="text">
-                    <div class="quote">
-                        <img src="" alt="">
-                    </div>
-                </div>
-                <div class="curve">
-                    <img src="" alt="">
                 </div>
             </div>
-
+            <div class="image-bigger-wrapper">
+                <div class="image-wrapper">
+                    <div class="image">
+                        <img src="assets/images/slider-img.png" alt="Slider photo">
+                    </div>
+                    <div class="result">
+                        <p>Result 2</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="buttons">
-            <img class="icons" data-action="p" src="" alt="icon-prev">
-            <img class="icons" data-action="n" src="" alt="icon-next">
+            <img class="icons" data-action="p" src="assets/images/chevron-left.svg" alt="icon-prev">
+            <img class="icons" data-action="n" src="assets/images/chevron-right.svg" alt="icon-next">
         </div>
     </div>
-    <script src="./dist/main.js"></script>
+    <script src="../dist/main.js"></script>
 </body>
 
 </html>

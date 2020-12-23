@@ -1,0 +1,68 @@
+@import './fontface';
+
+/* Slider Styles */
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0A223D;
+    margin: 0 65px;
+    font-family: 'Lato', sans-serif;
+}
+
+.main-wrapper {
+    position: relative;
+    top: 121px;
+    background-color: #146CBE;
+    margin-left: auto;
+    margin-right: auto;
+    width: 249px;
+    height: 262px;
+    border-radius: 10px;
+}
+
+.image-bigger-wrapper,
+.image-wrapper {
+    width: 184px;
+    height: 163px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image {
+    width: 184px;
+    height: 163px;
+}
+
+.result {
+    position: relative;
+    background-color: #146CBE;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    height: 10px;
+    top: -55px;
+    p {
+        text-align: center;
+        font-size: 8px;
+    }
+}
+
+.buttons {
+    position: relative;
+    width: 184px;
+    height: 10px;
+    position: relative;
+    top: -38%;
+}
+
+.icons {}

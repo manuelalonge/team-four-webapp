@@ -40,7 +40,7 @@ module.exports = {
             // video
           // images asset/resouce: take all the images and put them to destination folder images
           { 
-            test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
             type:"asset/resource",
             generator: {
               filename: 'images/[name].[ext]'
@@ -51,6 +51,15 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
         template: path.resolve(__dirname, "src", "index.html")
+        }),
+        new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, "src", "landing-page.html")
+        }),
+        new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, "src", "landing-page-mobile.html")
+        }),
+        new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, "src", "slider.html")
         }),
         new MiniCssExtractPlugin({
             filename: "style.css"

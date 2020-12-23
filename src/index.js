@@ -26,7 +26,7 @@ import './styles.scss';
     
     removeClass.addEventListener("click", function() {
 
-      var element = document.getElementById("section");
+      var element = document.getElementByClassName("section");
       element.classList.remove("section-visible");
     } )         
  
@@ -112,9 +112,9 @@ import './styles.scss';
   })();
 
 
-/* Images Upload Functions */
+/* Images Upload Functions (From Desktop) */
 
-const inputImage = document.querySelector("#images-upload");
+const inputImage = document.querySelector(".images-upload");
 const imagesContainer = document.querySelector(".load-images-gallery__images-container");
 
 (function init() {
@@ -145,9 +145,9 @@ function loadImage() {
 /* Slider Functions*/
 
 const buttons = document.querySelectorAll(".icons");
-const testimonials = document.querySelectorAll(".testimonials");
-const testimonialLetters = document.querySelector(".testimonialLetters");
-const totalTestimonials = testimonials.length;
+const imageWrapper = document.querySelectorAll(".image-wrapper");
+const sliderWrapper = document.querySelector(".slider-wrapper");
+const totalImageWrapper = imageWrapper.length;
 
 let current = 0;
 let vw;
@@ -162,8 +162,8 @@ let resizeTimeout;
         resizeTimeout= setTimeout (handleResize, 100);
     } 
 
-    for(i=0; i < testimonials.length; i++) {
-        testimonials[i].style.width = vw + "px";
+    for(i=0; i < imageWrapper.length; i++) {
+        imageWrapper[i].style.width = vw + "px";
     }
 
     for(i=0; i < buttons.length; i++) {
@@ -174,14 +174,12 @@ let resizeTimeout;
     }
 })();
 
-
-
 function setSlider() {
     vw = window.innerWidth;
-    sliderWidth = vw * totalTestimonials;
-    testimonialLetters.style.width = sliderWidth + "px";
-    for(i=0; i < testimonials.length; i++) {
-        testimonials[i].style.width = vw + "px";
+    sliderWidth = vw * totalImageWrapper;
+    sliderWrapper.style.width = sliderWidth + "px";
+    for(i=0; i < imageWrapper.length; i++) {
+        imageWrapper[i].style.width = vw + "px";
     }
 }
 
@@ -200,8 +198,7 @@ function changeSlide() {
     else if(action == "n") {
         prev();
         goSlide(current);
-    }
-   
+    }   
   
 }
 
@@ -217,7 +214,6 @@ function changeSlideKey(event) {
         goSlide(current);
     }
 }
-
 
 // Change slide with touch
 function Swipe(event) {
@@ -243,14 +239,14 @@ function next() {
     if(current > 0) {
         current--;
     } else {
-        current = totalTestimonials -1;
+        current = totalImageWrapper -1;
     }
 }
 
 function prev () {
-    if(current < totalTestimonials-1) {
-        current = totalTestimonials -1;
-    } else if (current >= totalTestimonials-1) {   
+    if(current < totalImageWrapper-1) {
+        current = totalImageWrapper -1;
+    } else if (current >= totalImageWrapper-1) {   
         current--;  
     }
 }
@@ -258,7 +254,7 @@ function prev () {
 // Take current and go to the right slide
 function goSlide(change) {    
     let newWidth = change * vw;
-    testimonialLetters.style.transform = "translate(" + -newWidth + "px)";
+    sliderWrapper.style.transform = "translate(" + -newWidth + "px)";
 }
 
 
