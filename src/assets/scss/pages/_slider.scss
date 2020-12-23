@@ -2,67 +2,88 @@
 
 /* Slider Styles */
 
-@mixin flexCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 * {
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 body {
     background-color: #0A223D;
-    margin: 0 65px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato-bold', sans-serif;
 }
+
+.site-logo--slider {
+    position: relative;
+    width: 112px;
+    height: 26px;
+    left: 33px;
+    top: 29px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+
+/* Slideshow container */
 
 .main-wrapper {
     position: relative;
-    top: 121px;
-    background-color: #146CBE;
     margin-left: auto;
     margin-right: auto;
+    background-color: #146CBE;
     width: 249px;
     height: 262px;
     border-radius: 10px;
 }
 
-.image-bigger-wrapper,
-.image-wrapper {
+.slideshow-container {
     width: 184px;
     height: 163px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.image {
-    width: 184px;
-    height: 163px;
-}
-
-.result {
-    position: relative;
-    background-color: #146CBE;
     border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+.slides-image-container {
+    width: 184px;
+    height: 163px;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 8.95px;
+    height: 20px;
+    color: black;
+    background-color: white;
+}
+
+.next {
+    right: 32px;
+}
+
+
+/* Result wrapper & text */
+
+.result-wrapper {
+    position: relative;
     width: 50px;
     height: 10px;
-    top: -55px;
-    p {
-        text-align: center;
-        font-size: 8px;
-    }
+    left: 100px;
+    top: 197px;
+    background: #146CBE;
+    border-radius: 10px;
 }
 
-.buttons {
-    position: relative;
-    width: 184px;
+.result-text {
+    width: 13px;
     height: 10px;
-    position: relative;
-    top: -38%;
+    font-size: 8px;
+    line-height: 10px;
+    text-align: center;
+    color: #FFFFFF;
 }
-
-.icons {}

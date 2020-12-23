@@ -14,41 +14,45 @@
     <meta property="og:locale" content="it_IT">
     <meta property="og:type" content="Web App">
     <meta property="og:image" content=".assets/images/open-graph-preview.png">
-    <link rel="stylesheet" href="./assets/scss/pages/_slider.scss">
     <title>PhotoMatch - Slider</title>
 </head>
 
 <body>
+    <!-- Slideshow container -->
     <div class="main-wrapper">
-        <div class="site-logo">
+        <div class="site-logo site-logo--slider">
             <h1>PhotoMatch</h1>
         </div>
-        <div class="slider-wrapper">
-            <div class="image-bigger-wrapper">
-                <div class="image-wrapper">
-                    <div class="image">
-                        <img src="assets/images/slider-img.png" alt="Slider photo">
-                    </div>
-                    <div class="result">
-                        <p>Result 1</p>
-                    </div>
+
+        <!-- Full-width images with number and caption text -->
+        <div class="slideshow-container">
+            <div class="slides-image-container">
+                <img class="image" src="./assets/images/cat-image.webp">
+                <div class="result-wrapper">
+                    <p class="result-text">Result 1</p>
                 </div>
             </div>
-            <div class="image-bigger-wrapper">
-                <div class="image-wrapper">
-                    <div class="image">
-                        <img src="assets/images/slider-img.png" alt="Slider photo">
-                    </div>
-                    <div class="result">
-                        <p>Result 2</p>
-                    </div>
+
+            <div class="slides-image-container">
+                <img class="image" src="./assets/images/cat-image.webp">
+                <div class="result-wrapper">
+                    <p class="result-text">Result 2</p>
                 </div>
             </div>
+
+            <div class="slides-image-container">
+                <img class="image" src="./assets/images/cat-image.webp">
+                <div class="result-wrapper">
+                    <p class="result-text">Result 3</p>
+                </div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <div class="buttons">
-            <img class="icons" data-action="p" src="assets/images/chevron-left.svg" alt="icon-prev">
-            <img class="icons" data-action="n" src="assets/images/chevron-right.svg" alt="icon-next">
-        </div>
+
+
     </div>
     <script src="../dist/main.js"></script>
 </body>

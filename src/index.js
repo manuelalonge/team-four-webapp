@@ -142,119 +142,29 @@ function loadImage() {
     
 }
 
-/* Slider Functions*/
+/* Slider */
 
-const buttons = document.querySelectorAll(".icons");
-const imageWrapper = document.querySelectorAll(".image-wrapper");
-const sliderWrapper = document.querySelector(".slider-wrapper");
-const totalImageWrapper = imageWrapper.length;
+var slideIndex = 1;
+showSlides(slideIndex);
 
-let current = 0;
-let vw;
-let startX;
-let resizeTimeout;
-
-(function init() {
-    setSlider();
-
-    window.onresize = function(){
-        clearTimeout(resizeTimeout);
-        resizeTimeout= setTimeout (handleResize, 100);
-    } 
-
-    for(i=0; i < imageWrapper.length; i++) {
-        imageWrapper[i].style.width = vw + "px";
-    }
-
-    for(i=0; i < buttons.length; i++) {
-        buttons[i].addEventListener("click", changeSlide)
-        window.addEventListener("keydown", changeSlideKey)
-        document.addEventListener('touchstart', Swipe);
-        document.addEventListener('touchend', endSwipe, false);
-    }
-})();
-
-function setSlider() {
-    vw = window.innerWidth;
-    sliderWidth = vw * totalImageWrapper;
-    sliderWrapper.style.width = sliderWidth + "px";
-    for(i=0; i < imageWrapper.length; i++) {
-        imageWrapper[i].style.width = vw + "px";
-    }
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-function handleResize() {
-    setSlider();
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-// Change slide with mouse click 
-function changeSlide() {
-   
-    let action = this.getAttribute("data-action");
-    if(action == "p") {
-        next();
-        goSlide(current);
-    } 
-    else if(action == "n") {
-        prev();
-        goSlide(current);
-    }   
-  
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slides-image-container");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
-
-// Change slide with keyboard click
-function changeSlideKey(event) {
-    if(event.keyCode == 37) {
-       
-        next();
-        goSlide(current);
-    } 
-    else if(event.keyCode == 39) {
-        prev();
-        goSlide(current);
-    }
-}
-
-// Change slide with touch
-function Swipe(event) {
-    var touch = event.touches[0];
-    startX = touch.pageX;
-}
-
-function endSwipe(event) {
-    var touch = event.changedTouches[0];
-    dist = touch.pageX - startX;
-    if(dist > 50 && dist < 300 ) {
-        next();
-        goSlide(current);
-    } else if(dist < -50 && dist > -300) {
-        prev();
-        goSlide(current);
-    }
-     return false;
-}
-
-// Choosing next or prev slide
-function next() {
-    if(current > 0) {
-        current--;
-    } else {
-        current = totalImageWrapper -1;
-    }
-}
-
-function prev () {
-    if(current < totalImageWrapper-1) {
-        current = totalImageWrapper -1;
-    } else if (current >= totalImageWrapper-1) {   
-        current--;  
-    }
-}
-
-// Take current and go to the right slide
-function goSlide(change) {    
-    let newWidth = change * vw;
-    sliderWrapper.style.transform = "translate(" + -newWidth + "px)";
-}
-
-

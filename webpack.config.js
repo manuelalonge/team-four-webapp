@@ -3,10 +3,11 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+  entry: './src/index.js',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
-   assetModuleFilename: 'images/[name].[ext]'
+    assetModuleFilename: 'images/[name].[ext]'
   },
     devServer: {
         contentBase: './dist',
@@ -35,7 +36,7 @@ module.exports = {
             { 
                 // fonts loader
                 test: /\.(woff|woff2|eot|ttf)$/,
-                type: 'asset/resource',
+                type: 'asset/resource'
               },
             // video
           // images asset/resouce: take all the images and put them to destination folder images
@@ -49,17 +50,21 @@ module.exports = {
         ]
     },
     plugins: [
+          // new HtmlWebpackPlugin({
+          //   filename: "index.html", 
+          // template: path.resolve(__dirname, "src", "index.html")
+          // }),
+          // new HtmlWebpackPlugin({
+          //   filename: "landing-page.html",
+          // template: path.resolve(__dirname, "src", "landing-page.html")
+          // }),
+          // new HtmlWebpackPlugin({
+          //  filename: "landing-page-mobile.html",
+          // template: path.resolve(__dirname, "src", "landing-page-mobile.html")
+          // }),
         new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, "src", "index.html")
-        }),
-        new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, "src", "landing-page.html")
-        }),
-        new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, "src", "landing-page-mobile.html")
-        }),
-        new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, "src", "slider.html")
+          filename: "slider.html",
+          template: path.resolve(__dirname, "src", "slider.html")
         }),
         new MiniCssExtractPlugin({
             filename: "style.css"
