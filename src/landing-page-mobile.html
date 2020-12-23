@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="TEAM 4 - Tomorrowdevs" />
+    <meta name="copyright" content="TEAM 4 - Tomorrowdevs" />
+    <meta name="description" content="Responsive Web App - Collaborative project tomorrowdevs">
+    <meta name="keywords" content="social, facebook,linkedin,people,connecting people,relationz,
+                                    social application, Single page application, reminder,
+                                    relations between employes " />
+
+    <link rel="canonical" href="https://team4-tomorrowdevs-webapp.netlify.app/" />
+    <meta property="og:title" content="Responsive Web App">
+    <meta property="og:url" content="https://team4-tomorrowdevs-webapp.netlify.app/">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:type" content="Web App">
+    <meta property="og:image" content=".assets/images/open-graph-preview.png">
+    <title>PhotoMatch - Picture upload</title>
+</head>
+
+<body>
+    <div class="site-logo">
+        <h1>PhotoMatch</h1>
+    </div>
+    <div class="load-images-gallery">
+
+        <div class="load-images-gallery__images-container">
+            <p>
+                Take a photo or choose it from your gallery
+            </p>
+        </div>
+        <div id="btn_takePhoto">
+
+            <section id="section" class="section-visible">
+
+                <div class="container">
+                    <div class="columns">
+                        <div class="column is-four-fifths">
+                            <video autoplay id="video"></video>
+                            <button class="button is-hidden" id="btnPlay">
+                <span class="icon is-small">
+                  <i class="fas fa-play"></i>
+                  PLAY
+                </span>
+              </button>
+                            <button class="button" id="btnPause">
+                <span class="icon is-small">
+                  PAUSA
+                </span>
+              </button>
+                            <button class="button is-success" id="btnScreenshot">
+                <span class="icon is-small">
+                  <i class="fas fa-camera"></i>
+                    LOAD FOTO 
+                </span>
+              </button>
+                            <button class="button" id="btnChangeCamera">
+                <span class="icon">
+                  <i class="fas fa-sync-alt"></i>
+                </span>
+                <span>Switch camera</span>
+              </button>
+                        </div>
+                        <div class="column">
+                            <h2 class="title">Photographs taken</h2>
+                            <div id="screenshots"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <canvas class="is-hidden" id="canvas"></canvas>
+
+
+            <div id="btn_circle">
+
+            </div>
+        </div>
+    </div>
+    <script src="dist/main.js"></script>
+</body>
+
+</html>
