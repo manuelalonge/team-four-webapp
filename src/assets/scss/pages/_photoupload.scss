@@ -61,6 +61,13 @@
     }
 }
 
+.section {    
+    transition: all 3s linear;
+}
+
+.section-visible {
+    display: none;  
+}
 
 /********Camera Button on Mobile - START***********/
 
@@ -88,3 +95,54 @@
 
 
 /********Camera Button on Mobile - END***********/
+
+/********VIDEO AND IMAGES TAKEN Start ************/
+
+#video {
+    height: auto;
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 0 auto;
+    position: relative;
+    width: auto;
+}
+
+.columns {
+    margin-left: -.75rem;
+    margin-right: -.75rem;
+    margin-top: -.75rem;
+}
+
+.button {
+    background-color: #fff;
+    border-color: #dbdbdb;
+    border-width: 1px;
+    color: #363636;
+    justify-content: center;
+    padding-bottom: calc(.5em - 1px);
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: calc(.5em - 1px);
+    text-align: center;
+    white-space: nowrap;
+}
+ 
+.title {
+    color: #fff;
+}
+
+.is-hidden {
+    display: none!important;
+}
+
+/********VIDEO AND IMAGES TAKEN END ************/
