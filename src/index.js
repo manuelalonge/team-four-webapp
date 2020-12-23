@@ -34,7 +34,7 @@ function loadImage() {
 
 const buttons = document.querySelectorAll(".icons");
 const imageWrapper = document.querySelectorAll(".image-wrapper");
-const imageBiggerWrapper = document.querySelector(".image-bigger-wrapper");
+const sliderWrapper = document.querySelector(".slider-wrapper");
 const totalImageWrapper = imageWrapper.length;
 
 let current = 0;
@@ -65,7 +65,7 @@ let resizeTimeout;
 function setSlider() {
     vw = window.innerWidth;
     sliderWidth = vw * totalImageWrapper;
-    imageBiggerWrapper.style.width = sliderWidth + "px";
+    sliderWrapper.style.width = sliderWidth + "px";
     for(i=0; i < imageWrapper.length; i++) {
         imageWrapper[i].style.width = vw + "px";
     }
@@ -86,8 +86,7 @@ function changeSlide() {
     else if(action == "n") {
         prev();
         goSlide(current);
-    }
-   
+    }   
   
 }
 
@@ -103,7 +102,6 @@ function changeSlideKey(event) {
         goSlide(current);
     }
 }
-
 
 // Change slide with touch
 function Swipe(event) {
@@ -144,6 +142,6 @@ function prev () {
 // Take current and go to the right slide
 function goSlide(change) {    
     let newWidth = change * vw;
-    imageBiggerWrapper.style.transform = "translate(" + -newWidth + "px)";
+    sliderWrapper.style.transform = "translate(" + -newWidth + "px)";
 }
 
