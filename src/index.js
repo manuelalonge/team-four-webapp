@@ -11,15 +11,15 @@ import './styles.scss';
     }
   
     // get page elements
-    const video = document.querySelector("#video");
-    const btnPlay = document.querySelector("#btnPlay");
-    const btnPause = document.querySelector("#btnPause");
-    const btnScreenshot = document.querySelector("#btnScreenshot");
-    const btnChangeCamera = document.querySelector("#btnChangeCamera");
-    const screenshotsContainer = document.querySelector("#screenshots");
-    const canvas = document.querySelector("#canvas");
-    const devicesSelect = document.querySelector("#devicesSelect");
-    var removeClass = document.querySelector("#btn_circle");
+    const video = document.querySelector(".video__mobile");
+    const btnPlay = document.querySelector(".btn__Play");
+    const btnPause = document.querySelector(".btn__Pause");
+    const btnScreenshot = document.querySelector(".btn__Screenshot");
+    const btnChangeCamera = document.querySelector(".btn__ChangeCamera");
+    const screenshotsContainer = document.querySelector(".container__screenshots");
+    const canvas = document.querySelector(".container__canvas");
+    //const devicesSelect = document.querySelector(".devicesSelect");
+    var removeClass = document.querySelector(".btn__circle");
 
 
     //btn visible 

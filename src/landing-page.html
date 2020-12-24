@@ -7,7 +7,9 @@
     <meta name="author" content="TEAM 4 - Tomorrowdevs" />
     <meta name="copyright" content="TEAM 4 - Tomorrowdevs" />
     <meta name="description" content="Responsive Web App - Collaborative project tomorrowdevs">
-    <meta name="keywords" content="upload, photo upload, camera, photocamera, cloud" />
+    <meta name="keywords" content="upload, photo upload, camera, photocamera, cloud social, facebook,linkedin,people,connecting people,relationz,
+                                   social application, Single page application, reminder,
+                                   relations between employes" />
 
     <link rel="canonical" href="https://team4-tomorrowdevs-webapp.netlify.app/" />
     <meta property="og:title" content="Responsive Web App">
@@ -15,28 +17,78 @@
     <meta property="og:locale" content="it_IT">
     <meta property="og:type" content="Web App">
     <meta property="og:image" content=".assets/images/open-graph-preview.png">
-    <title>PhotoMatch - Pictures upload</title>
+    <title>PhotoMatch - Pictures upload</title>    
 </head>
 
 <body>
     <div class="site-logo">
         <h1>PhotoMatch</h1>
     </div>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias voluptates eum nobis necessitatibus perferendis voluptate quae et sunt accusamus distinctio!</p>
-    <div class="load-images-gallery">
-        <label for="images-upload" class="load-images-gallery__upload">
-            Load from gallery
-        </label>
-        <input class="images-upload" type="file" />
-        <div class="load-images-gallery__images-container">
-            <div id="square_DragDrop">
-                <p>
-                    Click here to upload your photos <br> or <br> just drag & drop
-                </p>
+
+    <div class="btn__takePhoto">
+
+            <section class="section section-visible">
+                <div class="container__all">
+                    <div class="columns">
+                        <div class="column">
+                            <video autoplay class="video__mobile"></video>
+                            <button class="btn__Play button is-hidden">
+                                <span class="icon is-small">
+                                <i class="fas fa-play"></i>
+                                PLAY
+                                </span>
+                            </button>
+                            <button class="btn__Pause button">
+                                <span class="icon is-small">
+                                PAUSA
+                                </span>
+                            </button>
+                            <button class="btn__Screenshot button is-success">
+                                <span class="icon is-small">
+                                <i class="fas fa-camera"></i>
+                                    LOAD FOTO 
+                                </span>
+                            </button>
+                            <button class="btn__ChangeCamera button">
+                                <span class="icon">
+                                <i class="fas fa-sync-alt"></i>
+                                </span>
+                                <span>Switch camera</span>
+                            </button>
+                        </div>
+                        <div class="column">
+                            <h2 class="title">Photographs taken</h2>
+                            <div class="container__screenshots"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <canvas class="container__canvas is-hidden"></canvas>
+
+            <div class="btn__circle">
+            </div>
+    </div>
+
+    <div class="landing-page__Only-desktop">        
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias voluptates eum nobis necessitatibus perferendis voluptate quae et sunt accusamus distinctio!</p>
+        <div class="load-images-gallery">
+            <label for="images-upload" class="load-images-gallery__upload">
+                Load from gallery
+            </label>
+            <input class="images-upload" type="file" />
+            <div class="load-images-gallery__images-container">
+                <div class="square__DragDrop">
+                    <p>
+                        Click here to upload your photos <br> or <br> just drag & drop
+                    </p>
+                </div>
             </div>
         </div>
     </div>
+
     <script src="../dist/main.js"></script>
+    
 </body>
 
 </html>
