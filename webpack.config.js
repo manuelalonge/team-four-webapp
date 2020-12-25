@@ -33,6 +33,21 @@ module.exports = {
                 }
             ],
             },
+            {
+              test: /\.html$/i,
+              loader: 'html-loader',
+              options: {
+                attributes: {
+                  list: [
+                    {
+                      tag: 'img',
+                      attribute: 'src',
+                      type: 'src',
+                    },
+                  ]
+                }
+              }
+            },
             { 
                 // fonts loader
                 test: /\.(woff|woff2|eot|ttf)$/,
@@ -41,11 +56,24 @@ module.exports = {
             // video
           // images asset/resouce: take all the images and put them to destination folder images
           { 
-            test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+            test: /\.(webp)$/i,
             type:"asset/resource",
             generator: {
               filename: 'images/[name].[ext]'
             }
+          },
+          { test: /\.(png|svg|jpg|gif|webm|mp4)$/,
+            use: [
+            {
+              loader: 'file-loader',
+              options: {
+                esModule: false,
+                name: "[name].[ext]",
+                outputPath: "images/",
+                publicPath: "images/",
+              } 
+            }
+            ]
           },
         ]
     },
@@ -54,18 +82,18 @@ module.exports = {
           //   filename: "index.html", 
           // template: path.resolve(__dirname, "src", "index.html")
           // }),
-          // new HtmlWebpackPlugin({
-          //   filename: "landing-page.html",
-          // template: path.resolve(__dirname, "src", "landing-page.html")
-          // }),
+          new HtmlWebpackPlugin({
+            filename: "landing-page.html",
+            template: path.resolve(__dirname, "src", "landing-page.html")
+          }),
           // new HtmlWebpackPlugin({
           //  filename: "landing-page-mobile.html",
           // template: path.resolve(__dirname, "src", "landing-page-mobile.html")
           // }),
-        new HtmlWebpackPlugin({
+        /*new HtmlWebpackPlugin({
           filename: "slider.html",
           template: path.resolve(__dirname, "src", "slider.html")
-        }),
+        }),*/
         new MiniCssExtractPlugin({
             filename: "style.css"
           }),
