@@ -83,8 +83,8 @@ module.exports = {
           // template: path.resolve(__dirname, "src", "index.html")
           // }),
           // new HtmlWebpackPlugin({
-          //   filename: "landing-page.html",
-          // template: path.resolve(__dirname, "src", "landing-page.html")
+          // filename: "landing-page.html",
+           //template: path.resolve(__dirname, "src", "landing-page.html")
           // }),
           // new HtmlWebpackPlugin({
           //  filename: "landing-page-mobile.html",
