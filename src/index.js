@@ -1,6 +1,6 @@
 import './styles.scss';
-import './assets/js/dropzone.js';
-import './assets/js/slider.js';
+import './dropzone.js';
+import './slider.js'
 
 /* Take a photo function */
 (function () {
@@ -143,3 +143,4 @@ function loadImage() {
     }
     
 }
+

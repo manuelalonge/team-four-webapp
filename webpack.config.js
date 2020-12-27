@@ -34,6 +34,11 @@ module.exports = {
             ],
             },
             {
+              test: /\.js$/,
+              exclude: /node_modules/,
+              use: ["babel-loader"]
+            },
+            {
               test: /\.html$/i,
               loader: 'html-loader',
               options: {
@@ -90,14 +95,6 @@ module.exports = {
             filename: "slider.html",
             template: path.resolve(__dirname, "src", "slider.html")
           }),
-          // new HtmlWebpackPlugin({
-          //  filename: "landing-page-mobile.html",
-          // template: path.resolve(__dirname, "src", "landing-page-mobile.html")
-          // }),
-        /*new HtmlWebpackPlugin({
-          filename: "slider.html",
-          template: path.resolve(__dirname, "src", "slider.html")
-        }),*/
         new MiniCssExtractPlugin({
             filename: "style.css"
           }),
