@@ -11,15 +11,15 @@ import './styles.scss';
     }
   
     // get page elements
-    const video = document.querySelector("#video");
-    const btnPlay = document.querySelector("#btnPlay");
-    const btnPause = document.querySelector("#btnPause");
-    const btnScreenshot = document.querySelector("#btnScreenshot");
-    const btnChangeCamera = document.querySelector("#btnChangeCamera");
-    const screenshotsContainer = document.querySelector("#screenshots");
-    const canvas = document.querySelector("#canvas");
-    const devicesSelect = document.querySelector("#devicesSelect");
-    var removeClass = document.querySelector("#btn_circle");
+    const video = document.querySelector(".video__mobile");
+    const btnPlay = document.querySelector(".btn__Play");
+    const btnPause = document.querySelector(".btn__Pause");
+    const btnScreenshot = document.querySelector(".btn__Screenshot");
+    const btnChangeCamera = document.querySelector(".btn__ChangeCamera");
+    const screenshotsContainer = document.querySelector(".container__screenshots");
+    const canvas = document.querySelector(".container__canvas");
+    //const devicesSelect = document.querySelector(".devicesSelect");
+    var removeClass = document.querySelector(".btn__circle");
 
 
     //btn visible 
@@ -140,33 +140,4 @@ function loadImage() {
         console.log("error");
     }
     
-}
-
-/* Slider */
-
-import slideImage from "../src/assets/images/slider-img.png";
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("slides-image-container");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
 }

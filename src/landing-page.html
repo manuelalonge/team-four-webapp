@@ -7,7 +7,9 @@
     <meta name="author" content="TEAM 4 - Tomorrowdevs" />
     <meta name="copyright" content="TEAM 4 - Tomorrowdevs" />
     <meta name="description" content="Responsive Web App - Collaborative project tomorrowdevs">
-    <meta name="keywords" content="upload, photo upload, camera, photocamera, cloud" />
+    <meta name="keywords" content="upload, photo upload, camera, photocamera, cloud social, facebook,linkedin,people,connecting people,relationz,
+                                   social application, Single page application, reminder,
+                                   relations between employes" />
 
     <link rel="canonical" href="https://team4-tomorrowdevs-webapp.netlify.app/" />
     <meta property="og:title" content="Responsive Web App">
@@ -29,14 +31,13 @@
         </label>
         <input class="images-upload" type="file" />
         <div class="load-images-gallery__images-container">
-            <div id="square_DragDrop">
-                <p>
-                    Click here to upload your photos <br> or <br> just drag & drop
-                </p>
+            <div class="container__DropZone">
+                <form action="/file-upload" class="dropzone" id="my-awesome-dropzone"></form>
             </div>
         </div>
     </div>
-    <script src="../dist/main.js"></script>
 </body>
+
+<script src="/src/assets/js/dropzone.js"></script>
 
 </html>
