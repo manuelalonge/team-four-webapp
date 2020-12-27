@@ -16,6 +16,8 @@
     <meta property="og:type" content="Web App">
     <meta property="og:image" content=".assets/images/open-graph-preview.png">
     <title>PhotoMatch - Pictures upload</title>
+
+    <link rel="stylesheet" href="/src/styles.css">
 </head>
 
 <body>
@@ -29,13 +31,15 @@
         </label>
         <input class="images-upload" type="file" />
         <div class="load-images-gallery__images-container">
-            <div id="square_DragDrop">
-                <p>
-                    Click here to upload your photos <br> or <br> just drag & drop
-                </p>
-            </div>
+            <div class="container__DropZone">
+                <form action="/file-upload"
+                class="dropzone"
+                id="my-awesome-dropzone"></form>
+            </div>                
         </div>
     </div>
 </body>
+
+<script src="/src/assets/js/dropzone.js"></script>
 
 </html>
