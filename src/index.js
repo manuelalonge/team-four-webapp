@@ -144,6 +144,8 @@ function loadImage() {
 
 /* Slider */
 
+import slideImage from "../src/assets/images/slider-img.png";
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
