@@ -1,4 +1,3 @@
-
 /* Photo Upload Styles */
 
 @mixin flexCenter {
@@ -7,17 +6,23 @@
     align-items: center;
 }
 
-.square__DragDrop {
-    width: 50%;
-    padding: 15%;
+.load-images-gallery__images-container {
+    @include flexCenter();
+    width: 100%;
+    height: 100%;
+}
+
+.container__DropZone {
+    width: 70%;
     background-color: #0a223d;
-    ;
     border: 7px dashed #fff;
     border-radius: 10px;
-    p {
-        color: #fff;
-        font-size: 24px;
-        text-align: center;
+}
+
+.dropzone {
+    .dz-message {
+        margin: 8em 0;
+        @include flexCenter();
     }
 }
 
@@ -52,6 +57,7 @@
     }
 }
 
+
 /* @media screen and (max-width: 320px) {
     .btn__takePhoto {
         button {
@@ -60,13 +66,14 @@
     }
 } */
 
-.section {    
+.section {
     transition: all 3s linear;
 }
 
 .section-visible {
-    display: none;  
+    display: none;
 }
+
 
 /********Camera Button on Mobile - START***********/
 
@@ -94,6 +101,7 @@
 
 
 /********Camera Button on Mobile - END***********/
+
 
 /********VIDEO AND IMAGES TAKEN Start ************/
 
@@ -129,7 +137,7 @@ img {
     text-align: center;
     white-space: nowrap;
 }
- 
+
 .title {
     color: #fff;
 }
@@ -138,14 +146,14 @@ img {
     display: none!important;
 }
 
+
 /********VIDEO AND IMAGES TAKEN END ************/
+
 
 /*************** Video from destkop to mobile ********/
 
-.landing-page__Only-desktop{
+.landing-page__Only-desktop {
     @media screen and (max-width: 768px) {
         display: none;
     }
 }
-
-
