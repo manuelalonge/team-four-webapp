@@ -1,6 +1,6 @@
 import './styles.scss';
-import './dropzone.js';
-import './slider.js'
+import './assets/js/dropzone.js';
+import './assets/js/slider.js'
 
 /* Take a photo function */
 (function () {
