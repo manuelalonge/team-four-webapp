@@ -86,6 +86,10 @@ module.exports = {
             filename: "landing-page.html",
             template: path.resolve(__dirname, "src", "landing-page.html")
           }),
+          new HtmlWebpackPlugin({
+            filename: "slider.html",
+            template: path.resolve(__dirname, "src", "slider.html")
+          }),
           // new HtmlWebpackPlugin({
           //  filename: "landing-page-mobile.html",
           // template: path.resolve(__dirname, "src", "landing-page-mobile.html")
