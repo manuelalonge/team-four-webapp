@@ -42,6 +42,12 @@ body {
 }
 
 .slides-image-container {
+    display: none;
+}
+
+.image {
+    position: relative;
+    top: 32px;
     width: 184px;
     height: 163px;
 }
@@ -53,7 +59,7 @@ body {
 .next {
     cursor: pointer;
     position: absolute;
-    top: 38%;
+    top: 50%;
     width: 8.95px;
     height: 20px;
     color: black;
