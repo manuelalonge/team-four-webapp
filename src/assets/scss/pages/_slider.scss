@@ -31,6 +31,12 @@ body {
     width: 249px;
     height: 262px;
     border-radius: 10px;
+    @include breakpoint("desktop") {
+        position: relative;
+        width: 710px;
+        height: 487px;
+        bottom: 40px;
+    }
 }
 
 .slideshow-container {
@@ -39,10 +45,23 @@ body {
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
+    @include breakpoint("desktop") {
+        position: relative;
+        width: 517px;
+        height: 247px;
+        left: -60px;
+        top: 93px;
+    }
 }
 
 .slides-image-container {
     display: none;
+    @include breakpoint("desktop") {
+        position: relative;
+        width: 517px;
+        height: 247px;
+        top: -50px;
+    }
 }
 
 .image {
@@ -50,10 +69,22 @@ body {
     top: 32px;
     width: 184px;
     height: 163px;
+    @include breakpoint("desktop") {
+        width: 517px;
+        height: 247px;
+        top: 50px;
+    }
 }
 
 
 /* Next & previous buttons */
+
+.buttons {
+    @include breakpoint("desktop") {
+        position: relative;
+        top: -55%;
+    }
+}
 
 .prev,
 .next {
@@ -68,6 +99,9 @@ body {
 
 .next {
     right: 32px;
+    @include breakpoint("desktop") {
+        right: 0px;
+    }
 }
 
 
@@ -77,17 +111,38 @@ body {
     position: relative;
     width: 50px;
     height: 10px;
-    left: 100px;
-    top: 197px;
-    background: #146CBE;
-    border-radius: 10px;
-}
-
-.result-text {
-    width: 13px;
-    height: 10px;
     font-size: 8px;
     line-height: 10px;
+    font-family: Lato;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
+    background: #146CBE;
     color: #FFFFFF;
+    border-radius: 10px;
+    @include breakpoint("desktop") {
+        width: 113px;
+        height: 28px;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: #FFFFFF;
+        padding-top: 3px;
+    }
+}
+
+.lorem-ipsum {
+    display: none;
+    @include breakpoint("desktop") {
+        display: block;
+        position: relative;
+        top: 67px;
+        left: 35px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+    }
 }

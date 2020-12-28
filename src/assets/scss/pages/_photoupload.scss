@@ -157,3 +157,19 @@ img {
         display: none;
     }
 }
+
+.lorem-ipsum {
+    display: none;
+    @include breakpoint("desktop") {
+        display: block;
+        position: relative;
+        top: 25px;
+        left: 35px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+    }
+}
