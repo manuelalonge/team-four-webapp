@@ -146,3 +146,29 @@ body {
         color: #FFFFFF;
     }
 }
+
+.remove-button {
+    position: relative;
+    width: 11px;
+    height: 11px;
+    left: 6px;
+    top: 47px;
+    background-color: #BE4714;
+    border-radius: 50%;
+    z-index: 1;
+    img {
+        position: relative;
+        top: -7px;
+        left: 2px;
+    }
+    @include breakpoint("desktop") {
+        width: 30px;
+        height: 30px;
+        img {
+            width: 14px;
+            height: 13px;
+            top: 6px;
+            left: 8px;
+        }
+    }
+}
