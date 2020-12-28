@@ -1,9 +1,15 @@
-import slideImage from "../src/assets/images/slider-img.png";
-
 /* Slider */
 
+import slideImage from "C:/wamp64/www/team-four-webapp/src/assets/images/slider-img.png";
+import slideImageTwo from "C:/wamp64/www/team-four-webapp/src/assets/images/open-graph-preview.png";
+
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
 var slideIndex = 1;
 showSlides(slideIndex);
+
+prevButton.addEventListener("click", plusSlides(slideIndex-2));
+nextButton.addEventListener("click", plusSlides(slideIndex));
 
 // Next/previous controls
 function plusSlides(n) {
@@ -24,5 +30,4 @@ function showSlides(n) {
       slides[i].style.display = "none";
   }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += "active";
 }
