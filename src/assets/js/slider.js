@@ -1,7 +1,7 @@
 /* Slider */
 
-import slideImage from "C:/wamp64/www/team-four-webapp/src/assets/images/slider-img.png";
-import slideImageTwo from "C:/wamp64/www/team-four-webapp/src/assets/images/open-graph-preview.png";
+import slideImage from "./src/assets/images/slider-img.png";
+import slideImageTwo from "./src/assets/images/open-graph-preview.png";
 
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
