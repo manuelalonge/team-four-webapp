@@ -1,7 +1,12 @@
 /* Slider */
 
+<<<<<<< HEAD
 import slideImage from "../images/slider-img.png";
 import slideImageTwo from "../images/open-graph-preview.png";
+=======
+// import slideImage from "./src/assets/images/slider-img.png";
+// import slideImageTwo from "./src/assets/images/open-graph-preview.png";
+>>>>>>> develop
 
 /* Default slide index is 1 */
 var slideIndex = 1;
