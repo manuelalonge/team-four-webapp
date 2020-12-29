@@ -1,8 +1,56 @@
 import './styles.scss';
-import './assets/js/dropzone.js';
-import './assets/js/slider.js'
 
-/* Take a photo function */
+window.Dropzone = require('./assets/js/dropzone');
+import "./assets/js/slider";
+
+const messageError = document.querySelector(".message");
+const messageText = document.querySelector(".message__text");
+const closeMessage = document.querySelector(".close");
+const spinner = document.querySelector("#spinner");
+const modal = document.querySelector(".modal");
+closeMessage.addEventListener("click", closeAlert);
+const mainSlider = document.querySelector(".main-wrapper");
+
+function closeAlert (event) {
+    messageError.style.display = "none";
+}
+
+
+/*DROPZONE CUSTOMIZE CONFIGURATION*/
+Dropzone.options.myawesomedropzone = {
+  init: function() {
+    
+      this.on('addedfile', function(file) {
+        
+          if(this.files.length > 10) {
+              this.removeFile(this.files[10]);
+              messageError.style.display = "inline-block";
+              messageText.innerHTML = "no more than 10";
+          } else {
+              messageError.style.display = "none";
+          }
+       });
+       this.on('removedfile', function(file) {
+          if(this.files.length < 10) {
+              messageError.style.display = "none";
+          } else {
+              messageError.style.display = "inline-block";
+          }
+       });
+       let myDropzone = this;
+       document.querySelector("#button").addEventListener("click", function (e){
+         //spinner.style.visibility = "visible";  
+         //modal.style.display ="block";
+         console.log(myDropzone.files[0].dataURL)
+         mainSlider.style.display = "block";
+         /* e.preventDefault();
+          myDropzone.processQueue();    
+          */
+        });
+      },
+}
+
+/* Take a photo function 
 (function () {
     if (
       !"mediaDevices" in navigator ||
@@ -114,33 +162,6 @@ import './assets/js/slider.js'
   })();
 
 
-/* Images Upload Functions (From Desktop) */
-
-const inputImage = document.querySelector(".images-upload");
-const imagesContainer = document.querySelector(".load-images-gallery__images-container");
-
-(function init() {
-    inputImage.addEventListener("change", selectImage);
-})();
-
-
-function selectImage() {
-    const image = this.files[0];
-    if(image) {
-        const reader = new FileReader();
-        reader.addEventListener("load", loadImage);
-        reader.readAsDataURL(image);
-    }
-}
-        
-function loadImage() {
-    if(imagesContainer.children.length < 10) {
-        const newImage = new Image();
-        newImage.src = this.result;
-        imagesContainer.appendChild(newImage);
-    } else {
-        console.log("error");
-    }
-    
-}
+/* Images Upload Functions (From Desktop) 
+*/
 

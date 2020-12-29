@@ -49,7 +49,7 @@ function showSlides(n) {
   }
 
   /* Display the slide using display block if it is the one we're seeing on the screen */
-
+  console.log(slides);
   slides[slideIndex-1].style.display = "block";
 
 }
