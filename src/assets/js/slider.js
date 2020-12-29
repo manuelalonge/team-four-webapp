@@ -3,6 +3,7 @@
 import slideImage from "../images/slider-img.png";
 import slideImageTwo from "../images/open-graph-preview.png";
 
+
 /* Default slide index is 1 */
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -33,23 +34,24 @@ function plusSlides(n) {
 }*/
 
 function showSlides(n) {
+  
+    var i;
 
-  var i;
-
-  var slides = document.getElementsByClassName("slides-image-container");
-
-  if (n > slides.length) {slideIndex = 1}
-
-  if (n < 1) {slideIndex = slides.length}
-
-  /* Display none applied to the slide if it is not the one displayed on the screen*/
-
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-
-  /* Display the slide using display block if it is the one we're seeing on the screen */
-  console.log(slides);
-  slides[slideIndex-1].style.display = "block";
+  
+    if (n > slides.length) {slideIndex = 1}
+  
+    if (n < 1) {slideIndex = slides.length}
+  
+    /* Display none applied to the slide if it is not the one displayed on the screen*/
+  
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+  
+    /* Display the slide using display block if it is the one we're seeing on the screen */
+    console.log(slides);
+    slides[slideIndex-1].style.display = "block";
+  
+  
 
 }
