@@ -8,22 +8,28 @@ const messageText = document.querySelector(".message__text");
 const closeMessage = document.querySelector(".close");
 const spinnerLoader = document.querySelector("#spinner");
 const modalLoader = document.querySelector(".modal");
-closeMessage.addEventListener("click", closeAlert);
+
 const mainWrapper = document.querySelector(".main-wrapper");
 const slideContainer = document.querySelector(".slideshow-container");
+const exitBtn = document.querySelector(".remove-button");
 
 
-function closeAlert (event) {
-    messageError.style.display = "none";
+
+
+exitBtn.addEventListener("click", exitSlider);
+closeMessage.addEventListener("click", closeAlert);
+
+// message error if the button ok is pressed the box disappear
+function closeAlert () {
+  messageError.style.display = "none";
 }
-
 
 /*DROPZONE CUSTOMIZE CONFIGURATION*/
 Dropzone.options.myawesomedropzone = {
   init: function() {
     
       this.on('addedfile', function(file) {
-        
+        // if the files are more than 10 an error message appear and the 10^ element will be removed
           if(this.files.length > 10) {
               this.removeFile(this.files[10]);
               messageError.style.display = "inline-block";
@@ -33,21 +39,39 @@ Dropzone.options.myawesomedropzone = {
           }
        });
        this.on('removedfile', function(file) {
+         // if the button remove file (under the image) is pressed and the files are less than 10, the box error disappear
           if(this.files.length < 10) {
               messageError.style.display = "none";
           } else {
               messageError.style.display = "inline-block";
           }
        });
+       /* "this" is a reference to myDropzone. I add to call it outside the button funtion below because otherwise
+       it gives me a different value linked with the button
+       */
        let myDropzone = this;
-       let c = false;
        document.querySelector("#button").addEventListener("click", function (e){
          //spinnerLoader.style.visibility = "visible";  
          //modalLoader.style.display ="block";
-         myDropzone.files.forEach(function(element,i) {
-              createSlide(element.dataURL, i)
-         });
-         mainWrapper.style.display = "block";
+
+         /* if there are more than 0 slides already in the slider (maybe because i uploaded images before)
+        it will remove them*/
+         if(document.querySelectorAll(".slides-image-container").length > 0) {
+            document.querySelectorAll(".slides-image-container").forEach(function(element) {
+              element.parentNode.removeChild(element);
+         })};
+         /* here i take the files property of the object mydropzone and a pass the dataURL that is a reference to the image.
+          i need that because the tag img needed it in the src*/
+          myDropzone.files.forEach(function(element,i) {
+            createSlide(element.dataURL, i)
+          });
+          // here I removed all the files from the dropzone when upload is clicked
+          myDropzone.removeAllFiles();
+          mainWrapper.style.display = "block";
+
+         // document.querySelector(".slides-image-container").innerHTML = "";
+         
+        
          /* e.preventDefault();
           myDropzone.processQueue();    
           */
@@ -55,6 +79,8 @@ Dropzone.options.myawesomedropzone = {
       },
 }
 
+/* here I create the slides that composed the slideshow, i assigned the dataURL to the src,
+based on the slider built by Manuel I give to the first slide the display block (index 0)*/
 function createSlide(imageSrc, index) {
     const slides = document.createElement("div");
     slides.classList.add("slides-image-container");
@@ -74,6 +100,10 @@ function createSlide(imageSrc, index) {
     slideContainer.appendChild(slides);
 }
 
+// button to exit from the slider when the modal appear
+function exitSlider () {
+  mainWrapper.style.display = "none";
+}
 
 
 /* Default slide index is 1 */
@@ -134,7 +164,7 @@ function showSlides(n) {
 
 
 
-/* Take a photo function 
+/*Take a photo function */
 (function () {
     if (
       !"mediaDevices" in navigator ||

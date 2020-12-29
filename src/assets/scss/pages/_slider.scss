@@ -42,6 +42,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
+    z-index:2;
     @include breakpoint("desktop") {
         position: relative;
         width: 517px;
@@ -77,6 +78,7 @@ body {
 /* Next & previous buttons */
 
 .buttons {
+    z-index:1;
     @include breakpoint("desktop") {
         position: relative;
     }
