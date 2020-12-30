@@ -193,7 +193,7 @@ function (_Emitter) {
          * How many file uploads to process in parallel (See the
          * Enqueuing file uploads documentation section for more info)
          */
-        parallelUploads: 2,
+        parallelUploads: 10,
 
         /**
          * Whether to send multiple files in one request. If
@@ -266,12 +266,12 @@ function (_Emitter) {
         /**
          * If `null`, the ratio of the image will be used to calculate it.
          */
-        thumbnailWidth: 120,
+        thumbnailWidth: 80,
 
         /**
          * The same as `thumbnailWidth`. If both are null, images will not be resized.
          */
-        thumbnailHeight: 120,
+        thumbnailHeight: 80,
 
         /**
          * How the images should be scaled down in case both, `thumbnailWidth` and `thumbnailHeight` are provided.
@@ -323,7 +323,7 @@ function (_Emitter) {
         /**
          * Can be used to limit the maximum number of files that will be handled by this Dropzone
          */
-        maxFiles: null,
+        maxFiles: 10,
 
         /**
          * An optional object to send additional headers to the server. Eg:
@@ -357,7 +357,7 @@ function (_Emitter) {
          * [`accept`](https://developer.mozilla.org/en-US/docs/HTML/Element/input#attr-accept)
          * parameter on the hidden file input as well.
          */
-        acceptedFiles: null,
+        acceptedFiles: '.png, .jpg',
 
         /**
          * **Deprecated!**
@@ -375,7 +375,7 @@ function (_Emitter) {
          * See the [enqueuing file uploads](#enqueuing-file-uploads) documentation
          * section for more information.
          */
-        autoProcessQueue: true,
+        autoProcessQueue: false,
 
         /**
          * If false, files added to the dropzone will not be queued by default.
@@ -388,7 +388,7 @@ function (_Emitter) {
          * already uploading) the file. The `dictCancelUpload`, `dictCancelUploadConfirmation`
          * and `dictRemoveFile` options are used for the wording.
          */
-        addRemoveLinks: false,
+        addRemoveLinks: true,
 
         /**
          * Defines where to display the file previews – if `null` the
