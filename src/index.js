@@ -79,7 +79,7 @@ Dropzone.options.myawesomedropzone = {
       },
 }
 
-/* here I create the slides that composed the slideshow, i assigned the dataURL to the src,
+/* Here I create the slides that composed the slideshow, i assigned the dataURL to the src,
 based on the slider built by Manuel I give to the first slide the display block (index 0)*/
 function createSlide(imageSrc, index) {
     const slides = document.createElement("div");
@@ -105,6 +105,12 @@ function exitSlider () {
   mainWrapper.style.display = "none";
 }
 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == mainWrapper) {
+    mainWrapper.style.display = "none";
+  }
+}
 
 /* Default slide index is 1 */
 var slideIndex = 1;
