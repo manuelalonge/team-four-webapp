@@ -1,8 +1,8 @@
 /* Slider */
 
-import slideImage from "./src/assets/images/slider-img.png";
-import slideImageTwo from "./src/assets/images/open-graph-preview.png";
-
+/* import slideImage from "../images";
+import slideImageTwo from "../images/open-graph-preview.png";
+ */
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 var slideIndex = 1;
