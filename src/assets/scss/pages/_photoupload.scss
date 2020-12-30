@@ -1,45 +1,55 @@
 /* Photo Upload Styles */
+
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
 
 
 /* spinner and the animation starts when upload button is clicked*/
 
-  #spinner{
-      visibility: hidden;
-      width: 80px;
-      height: 80px;
-      border: 5px solid #f3f3f3;
-      border-top:5px solid #f25a41;
-      border-radius: 100%;
-      position: absolute;
-      top:0;
-      bottom:0;
-      left:0;
-      right: 0;
-      margin: auto;
-      z-index:1;
-      animation: spin 1s infinite linear;
-    }
+#spinner {
+    visibility: hidden;
+    width: 80px;
+    height: 80px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #f25a41;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    animation: spin 1s infinite linear;
+}
 
-    @keyframes spin {
-        from {
-            transform: rotate(0deg);
-        } to {
-            transform: rotate(360deg);
-        }
-      }
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 /* Images Drag & Drop */
 
