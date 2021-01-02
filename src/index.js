@@ -131,7 +131,6 @@ nextButton.addEventListener("click", function(){
 
 /* Next / previous controls */
 function plusSlides(n) {
-  console.log("Slider buttons are working correctly");
 
   /* Increase slide index when you press the button next and decrease it when you press the button previous */
   showSlides(slideIndex += n);
@@ -145,7 +144,6 @@ function plusSlides(n) {
 function showSlides(n) {
   var arr = Array.from(slides);
       console.log(arr);
- console.log(slides);
     var i;
 
   
@@ -162,7 +160,6 @@ function showSlides(n) {
       }
     
       /* Display the slide using display block if it is the one we're seeing on the screen */
-      console.log(slides);
       slides[slideIndex-1].style.display = "block";
     }
   
@@ -196,7 +193,7 @@ function showSlides(n) {
     
     removeClass.addEventListener("click", function() {
 
-      var element = document.getElementByClassName("section");
+      var element = document.querySelector(".section");
       element.classList.remove("section-visible");
     } )         
  
@@ -241,12 +238,19 @@ function showSlides(n) {
   
     // take screenshot
     btnScreenshot.addEventListener("click", function () {
+      if(document.querySelectorAll(".slides-image-container").length > 0) {
+        document.querySelectorAll(".slides-image-container").forEach(function(element) {
+          element.parentNode.removeChild(element);
+     })};
       const img = document.createElement("img");
+      img.classList.add("slides-image-container");
+      img.style.display = "block";
       canvas.width = video.videoWidth;
       canvas.height = video.videoHeight;
       canvas.getContext("2d").drawImage(video, 0, 0);
       img.src = canvas.toDataURL("image/png");
-      screenshotsContainer.prepend(img);
+      slideContainer.prepend(img);
+      mainWrapper.style.display = "block";
     });
   
     // switch camera
