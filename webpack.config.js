@@ -84,13 +84,13 @@ module.exports = {
         ]
     },
     plugins: [
-          new HtmlWebpackPlugin({
+          /*new HtmlWebpackPlugin({
             filename: "index.html", 
             template: path.resolve(__dirname, "flaskr","templates","auth", "index.html")
-          }),
+          }),*/
           new HtmlWebpackPlugin({
-            filename: "landing-page.html",
-            template: path.resolve(__dirname, "flaskr","templates","upload", "landing_page.html")
+            filename: "landing-page.html_1",
+            template: path.resolve(__dirname, "flaskr","templates","upload", "landing_page_1.html")
           }),
         new MiniCssExtractPlugin({
             filename: "style.css"
