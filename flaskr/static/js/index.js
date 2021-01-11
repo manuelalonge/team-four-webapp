@@ -1,10 +1,10 @@
 import './styles.scss';
-/*
+
 const messageError = document.querySelector(".message");
 const messageText = document.querySelector(".message__text");
 const closeMessage = document.querySelector(".close");
 const spinnerLoader = document.querySelector("#spinner");
-const modalLoader = document.querySelector(".modal");
+const modal = document.querySelectorAll(".modal");
 
 const mainWrapper = document.querySelector(".main-wrapper");
 const slideContainer = document.querySelector(".slideshow-container");
@@ -14,7 +14,7 @@ const exitBtn = document.querySelector(".remove-button");
 
 
 exitBtn.addEventListener("click", exitSlider);
-*/
+
 // closeMessage.addEventListener("click", closeAlert);
 
 // message error if the button ok is pressed the box disappear
@@ -27,8 +27,6 @@ const modalGallery = document.querySelector(".load-images-gallery__modal");
 const imageSelected = document.querySelector(".load-images-gallery__container");
 const loadImageSquare = document.querySelector(".load-images-gallery__upload");
 const upload = document.querySelector(".load-images-gallery__submit");
-console.log(loadImageSquare);
-console.log(inputImage);
 
 ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
     loadImageSquare.addEventListener(eventName, preventDefaults, false)
@@ -54,8 +52,8 @@ function previewFile(file) {
     reader.readAsDataURL(file);
 
     reader.onloadend = function() {
-    let i = this.result;
-    loadImage(i);
+    let dragImage = this.result;
+    loadImage(dragImage);
     }
   }
 
@@ -76,25 +74,29 @@ function selectImage() {
     if(errorFormat !== undefined) {
         errorFormat.innerText = "";
     }
-    const image = this.files[0];
-    if(image.type == "image/jpeg" || image.type == "image/png") {
+    const image = Array.from(this.files);
+  image.forEach(function(element) {
+      if(element.type == "image/jpeg" || element.type == "image/png") {
         const reader = new FileReader();
         reader.addEventListener("load", loadImage);
-        reader.readAsDataURL(image);
-    } else {
-        errorFormat = document.createElement("p");
-        errorFormat.innerText = "The format of the file is invalid";
-        loadImageSquare.appendChild(errorFormat);
-    }
-
+        reader.readAsDataURL(element);
+      } else {
+          errorFormat = document.createElement("p");
+          errorFormat.innerText = "The format of the file is invalid";
+          loadImageSquare.appendChild(errorFormat);
+      }
+  });
 }
         
 function loadImage(src) {
+  console.log(src);
     let imageLoaded = this;
     const imageBox = document.createElement("div");
+    const imageContainer = document.createElement("div");
     const removeBtn = document.createElement("p");
 
     imageBox.classList.add("imageSelected");
+    imageContainer.classList.add("imageContainer");
     removeBtn.classList.add("removeImage");
     removeBtn.innerHTML = "X"
     newImage = new Image();
@@ -106,7 +108,8 @@ function loadImage(src) {
     } else {
       newImage.src = this.result;
     }
-    imageBox.appendChild(newImage);
+    imageBox.appendChild(imageContainer);
+    imageContainer.appendChild(newImage);
     imageBox.appendChild(removeBtn);
     loadImageSquare.appendChild(imageBox);
 
@@ -119,41 +122,49 @@ function loadImage(src) {
             
         });
     });
-
-//     console.log(newImage);
-// let imagePath = newImage.src;
-
+  }
+         
+       
+  upload.addEventListener("click", createSlide);
         
-//         Array.from(loadImageSquare.children).forEach(function(element,i) {
-//             createSlide(imagePath,i );
-//         })
-//         upload.addEventListener("click", createSlide);
-        
-//         function createSlide(path, index){
+    function createSlide(e){
+        e.preventDefault();
+          /* if there are more than 0 slides already in the slider (maybe because i uploaded images before)
+          it will remove them*/
+        if(document.querySelectorAll(".slides-image-container").length > 0) {
+            document.querySelectorAll(".slides-image-container").forEach(function(element) {
+              element.parentNode.removeChild(element);
+        })}
+        modal[1].style.display = "block";
+        mainWrapper.style.display = "block";
+        let im = document.querySelectorAll(".readyImage");
           
-//             const slides = document.createElement("div");
-//     slides.classList.add("slides-image-container");
-//     if(index == 0) {
-//       slides.style.display = "block";
-//     } 
-//     const image = new Image();
-//     const result = document.createElement("div");
-//     result.classList.add("result-wrapper");
+        im.forEach(function(element,i) {
+          const slides = document.createElement("div");
+          slides.classList.add("slides-image-container");
+        if(i == 0) {
+          slides.style.display = "block";
+        } 
+        console.log(slides);
+        const image = new Image();
+        const result = document.createElement("div");
+        result.classList.add("result-wrapper");
 
-//     image.classList.add("image");
-//     image.src = path;
+        image.classList.add("image");
+        image.src = element.src;
 
-//     slides.appendChild(image);
-//     slides.appendChild(result);
-//     slides.children[0].style.display = "block";
-//     slideContainer.appendChild(slides);
-//   }
-}
+        slides.appendChild(image);
+        slides.appendChild(result);
+        slides.children[0].style.display = "block";
+        slideContainer.appendChild(slides);
+      })
+    }
 
 
 /* Here I create the slides that composed the slideshow, i assigned the dataURL to the src,
 based on the slider built by Manuel I give to the first slide the display block (index 0)
 function createSlide(imageSrc, index) {
+    e.preventDefault();
     const slides = document.createElement("div");
     slides.classList.add("slides-image-container");
     if(index == 0) {
@@ -173,7 +184,7 @@ function createSlide(imageSrc, index) {
 }
 */
 // button to exit from the slider when the modal appear
-/*
+
 
 function exitSlider () {
   mainWrapper.style.display = "none";
@@ -186,32 +197,32 @@ window.onclick = function(event) {
   }
 }
 
-/* Default slide index is 1 
+/* Default slide index is 1*/ 
 var slideIndex = 1;
 var slides = document.getElementsByClassName("slides-image-container");
 showSlides(slideIndex);
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 
-/* Callback for previous button 
+/* Callback for previous button */ 
 prevButton.addEventListener("click", function(){
   plusSlides(-1);
 });
 
-/* Callback for next button 
+/* Callback for next button */ 
 nextButton.addEventListener("click", function(){
   plusSlides(1);
 });
 
-/* Next / previous controls 
+/* Next / previous controls */ 
 function plusSlides(n) {
   console.log("Slider buttons are working correctly");
 
-  /* Increase slide index when you press the button next and decrease it when you press the button previous
+  /* Increase slide index when you press the button next and decrease it when you press the button previous*/ 
   showSlides(slideIndex += n);
 }
 
-/* Thumbnail image controls 
+/* Thumbnail image controls */ 
  function currentSlide(n) {
    showSlides(slideIndex = n);
 }
@@ -229,18 +240,18 @@ function showSlides(n) {
   
       if (n < 1) {slideIndex = slides.length}
     
-      /* Display none applied to the slide if it is not the one displayed on the screen
+      /* Display none applied to the slide if it is not the one displayed on the screen*/ 
       for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
       }
     
-      /* Display the slide using display block if it is the one we're seeing on the screen 
+      /* Display the slide using display block if it is the one we're seeing on the screen */ 
       console.log(slides);
       slides[slideIndex-1].style.display = "block";
     }
   
   }
-*/
+
   
 
 

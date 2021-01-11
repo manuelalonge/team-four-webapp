@@ -33,7 +33,8 @@
 }
 
 .readyImage {
-    width:30%;
+    width:100%;
+    height:100%;
 }
 
 input[type="file"] {
@@ -44,12 +45,23 @@ input[type="file"] {
     width:50%;
 }
 
+.imageSelected {
+    display:inline-block;
+    margin-right:20px;  
+}
+
 .load-images-gallery__submit {
     background-color:#fff;
     color:green;
     padding:20px;
 }
 
+.imageContainer {
+    width:120px;
+    overflow:hidden;
+    height:120px;
+    border-radius:20px;
+}
 
 #spinner {
     visibility: hidden;
