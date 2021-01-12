@@ -24,11 +24,12 @@
 
 /* spinner and the animation starts when upload button is clicked*/
 .load-images-gallery__upload {
+    padding: 0 50px;
     display:block;
     cursor: pointer;
     max-width:600px;
     background-color:green;
-    min-height:500px;
+    min-height:550px;
     border:1px solid #000;
 }
 
@@ -48,6 +49,7 @@ input[type="file"] {
 .imageSelected {
     display:inline-block;
     margin-right:20px;  
+    text-align: center;
 }
 
 .load-images-gallery__submit {
@@ -57,10 +59,19 @@ input[type="file"] {
 }
 
 .imageContainer {
-    width:120px;
+    margin:10px;
+    width: 100px;
     overflow:hidden;
-    height:120px;
+    height:100px;
     border-radius:20px;
+}
+
+.removeImage {
+    color:#FFFFFF;
+    background-color:#0A223D;
+    padding:10px;
+    border-radius:50%;
+    display:inline-block;
 }
 
 #spinner {
