@@ -32,15 +32,19 @@
     <!--<p class="container-lorem">Welcome to PhotoMatch<br> Load your picture for it to be recognized from our servers</p>
     <div class="load-images-gallery">-->
     <!-- Dropzone square -->
-    <div class="load-images-gallery__images-container">
+    <div class="load-images-gallery">
         <form action="{{ url_for('upload.upload_file') }}" method="POST" enctype="multipart/form-data" class="load-images-gallery__container">
             <!--url_for('nome_funzione') è il modo in cui flask chiama le funzioni dal backend, POST è il metodo utilizzato, enctype è necessario-->
             <label for="images-upload" class="load-images-gallery__upload">
-                    Select image:
+                  
                 </label>
-            <input type="file" name="files[]" multiple="true" accept="image/*" id="images-upload" capture/>
+            <input type="file" name="files[]" multiple accept="image/*" id="images-upload" capture/>
             <input type="submit" class="load-images-gallery__submit" value="result list">
         </form>
+        <div class="message">
+            <span class="message__text">No more than 10 images allowed</span> 
+            <span class="close">OK</span>
+        </div>
         <h2> {{value}} </h2>
         <!-- value nella stringa di sopra è il tag tramite cui il frontend riceve i dati dal backend -->
     </div>
