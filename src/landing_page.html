@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="TEAM 4 - Tomorrowdevs" />
+    <meta name="copyright" content="TEAM 4 - Tomorrowdevs" />
+    <meta name="description" content="Responsive Web App - Collaborative project tomorrowdevs">
+    <meta name="keywords" content="upload, photo upload, camera, photocamera, cloud" />
+    <link rel="canonical" href="https://team4-tomorrowdevs-webapp.netlify.app/" />
+    <meta property="og:title" content="Responsive Web App">
+    <meta property="og:url" content="https://team4-tomorrowdevs-webapp.netlify.app/">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:type" content="Web App">
+    <meta property="og:image" content="./assets/images/open-graph-preview.png">
+    <title>PhotoMatch - Landing Page</title>
+</head>
+
+
+<body>
+    <div id="myModal" class="modal">
+        <div id="spinner"></div>
+    </div>
+
+    <div class="site-logo">
+        <h1>PhotoMatch</h1>
+    </div>
+    <p class="container-lorem">Welcome to PhotoMatch<br> Load your picture for it to be recognized from our servers</p>
+    <div class="load-images-gallery">
+        <!-- Dropzone square -->
+        <div class="load-images-gallery">
+            <form action="" method="POST" enctype="multipart/form-data" class="load-images-gallery__container">
+
+                <label for="images-upload" class="load-images-gallery__upload">
+                  
+                </label>
+                <input type="file" name="files[]" multiple accept="image/*" id="images-upload" capture/>
+                <input type="submit" class="load-images-gallery__submit" value="result list">
+            </form>
+            <div class="message">
+                <span class="message__text">No more than 10 images allowed</span>
+                <span class="close">OK</span>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Slideshow container -->
+    <div class="main-wrapper modal">
+        <!-- Slider images with number and caption text -->
+        <div class="slideshow-container">
+            <div class="remove-button"><img src="./assets/images/remove-button-icon.svg"></div>
+        </div>
+        <!-- Next and previous buttons -->
+        <div class="buttons">
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+        </div>
+
+    </div>
+    </div>
+</body>
+
+</html>
