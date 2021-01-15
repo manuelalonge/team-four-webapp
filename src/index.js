@@ -1,6 +1,5 @@
 import './styles.scss';
 
-
 const spinnerLoader = document.querySelector("#spinner");
 const modal = document.querySelectorAll(".modal");
 
