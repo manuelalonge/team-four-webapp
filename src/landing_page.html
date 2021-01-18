@@ -26,23 +26,27 @@
     <div class="site-logo">
         <h1>PhotoMatch</h1>
     </div>
-    <p class="container-lorem">Welcome to PhotoMatch<br> Load your picture for it to be recognized from our servers</p>
+    <p class="container-lorem">Welcome to PhotoMatch</p>
+    <br>
+    <p class="container-lorem">Drop your picture inside the green box for it to be recognized from our servers</p>
+    <br>
     <div class="load-images-gallery">
         <!-- Dropzone square -->
         <div class="load-images-gallery">
             <form action="" method="POST" enctype="multipart/form-data" class="load-images-gallery__container">
 
-                <label for="images-upload" class="load-images-gallery__upload">
-                  
+                <label for="images-upload" class="load-images-gallery__upload">                  
                 </label>
-                <input type="file" name="files[]" multiple accept="image/*" id="images-upload" capture/>
+                <input type="file" name="files[]" multiple accept="image/*" class="images-upload" capture/>
                 <input type="submit" class="load-images-gallery__submit" value="result list">
             </form>
+
             <div class="message">
                 <span class="message__text">No more than 10 images allowed</span>
                 <span class="close">OK</span>
             </div>
         </div>
+        <p class="container-lorem-mobile" style="color: white;">Click on the green box to take a photo or choose it from your gallery</p>
     </div>
     </div>
 
