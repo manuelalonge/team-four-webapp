@@ -1,8 +1,6 @@
 .login-form {
     &__email {
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexSpace;
     }
     .registration {
         margin-top:10px;
