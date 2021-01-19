@@ -89,6 +89,10 @@ module.exports = {
             template: path.resolve(__dirname, "src", "index.html")
           }),
           new HtmlWebpackPlugin({
+            filename: "registration.html", 
+            template: path.resolve(__dirname, "src", "registration.html")
+          }),
+          new HtmlWebpackPlugin({
             filename: "landing_page.html",
             template: path.resolve(__dirname, "src", "landing_page.html")
           }),
