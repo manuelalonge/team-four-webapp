@@ -6,6 +6,18 @@ The file makes the drag & drop work and creates the thumbnail of the picture whe
 Moreover it puts the images into the slider once they're put inside the box 
 */
 
+   /* The function below activates a toggle for the input field to use for password recovery (you insert there your e-mail and recover your password)
+  By clicking on the link, the field is shown or hidden */
+
+  function toggleInputField() {
+    var input = document.querySelector('.login-section__psw-recovery-field');
+    input.classList.toggle('login-section__psw-recovery--display-block');       
+  }
+  
+  var link = document.querySelector('.login-section__psw-recovery-link');
+    
+  link.addEventListener('click', toggleInputField);
+
 const spinnerLoader = document.querySelector("#spinner");
 const modal = document.querySelectorAll(".modal");
 
@@ -38,7 +50,7 @@ let errorFormat;
 })();
 
 
-/* dragAndDrop initialize function */
+// dragAndDrop initialize function
 (function dragAndDrop() {
   //drag and drop function: prevent the default behaviour for every event(the default is to not drop)
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
@@ -218,33 +230,33 @@ if (event.target == mainWrapper) {
 }
 }
 
-/* SLIDER SECTION*/
-/* Default slide index is 1*/ 
+// SLIDER SECTION
+// Default slide index is 1
 var slideIndex = 1;
 var slides = document.getElementsByClassName("slides-image-container");
 showSlides(slideIndex);
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 
-/* Callback for previous button */ 
+// Callback for previous button
 prevButton.addEventListener("click", function(){
   plusSlides(-1);
 });
 
-/* Callback for next button */ 
+// Callback for next button 
 nextButton.addEventListener("click", function(){
   plusSlides(1);
 });
 
-/* Next / previous controls */ 
+// Next / previous controls
 function plusSlides(n) {
   console.log("Slider buttons are working correctly");
 
-  /* Increase slide index when you press the button next and decrease it when you press the button previous*/ 
+  // Increase slide index when you press the button next and decrease it when you press the button previous
   showSlides(slideIndex += n);
 }
 
-/* Thumbnail image controls */ 
+// Thumbnail image controls 
  function currentSlide(n) {
    showSlides(slideIndex = n);
 }
@@ -262,29 +274,21 @@ function showSlides(n) {
   
       if (n < 1) {slideIndex = slides.length}
     
-      /* Display none applied to the slide if it is not the one displayed on the screen*/ 
+      // Display none applied to the slide if it is not the one displayed on the screen
       for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
       }
     
-      /* Display the slide using display block if it is the one we're seeing on the screen */ 
+      // Display the slide using display block if it is the one we're seeing on the screen
       console.log(slides);
       slides[slideIndex-1].style.display = "block";
     }
   
   }
 
-   /* The function below activates a toggle for the input field to use for password recovery (you insert there your e-mail and recover your password)
-  By clicking on the link, the field is shown or hidden */
 
-  function toggleInputField() {
-    var input = document.querySelector('.login-section__psw-recovery-field');
-    input.classList.toggle('.login-section__psw-recovery--display-block');       
-  }
   
-  var link = document.querySelector('.login-section__psw-recovery-link');
   
-  link.addEventListener('click', toggleInputField);
 
  
 
