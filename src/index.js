@@ -6,6 +6,8 @@ The file makes the drag & drop work and creates the thumbnail of the picture whe
 Moreover it puts the images into the slider once they're put inside the box 
 */
 
+// Login JS
+
    /* The function below activates a toggle for the input field to use for password recovery (you insert there your e-mail and recover your password)
   By clicking on the link, the field is shown or hidden */
 
@@ -17,6 +19,8 @@ Moreover it puts the images into the slider once they're put inside the box
   var link = document.querySelector('.login-section__psw-recovery-link');
     
   link.addEventListener('click', toggleInputField);
+
+// Landing Page JS
 
 const spinnerLoader = document.querySelector("#spinner");
 const modal = document.querySelectorAll(".modal");
