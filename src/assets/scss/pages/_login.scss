@@ -107,6 +107,17 @@ body {
             margin-top: 67px;
         }
     }
+    &__psw-recovery-link {
+        text-decoration: underline;
+        cursor: pointer;
+        color: blue;
+    }
+    &__psw-recovery-field {
+        display: none;
+    }
+    &__psw-recovery--display-block {
+        display: block;
+    }
 }
 
 .how-it-works {

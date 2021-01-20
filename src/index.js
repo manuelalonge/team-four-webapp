@@ -1,5 +1,11 @@
 import './styles.scss';
 
+/* 
+The file makes the drag & drop work and creates the thumbnail of the picture when put inside the drsg & drop box.
+
+Moreover it puts the images into the slider once they're put inside the box 
+*/
+
 const spinnerLoader = document.querySelector("#spinner");
 const modal = document.querySelectorAll(".modal");
 
@@ -267,6 +273,20 @@ function showSlides(n) {
     }
   
   }
+
+   /* The function below activates a toggle for the input field to use for password recovery (you insert there your e-mail and recover your password)
+  By clicking on the link, the field is shown or hidden */
+
+  function toggleInputField() {
+    var input = document.querySelector('.login-section__psw-recovery-field');
+    input.classList.toggle('.login-section__psw-recovery--display-block');       
+  }
+  
+  var link = document.querySelector('.login-section__psw-recovery-link');
+  
+  link.addEventListener('click', toggleInputField);
+
+ 
 
   
 
