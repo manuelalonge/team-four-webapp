@@ -1,0 +1,8 @@
+.login-form {
+    &__email {
+        @include flexSpace;
+    }
+    .registration {
+        margin-top:10px;
+    }
+}

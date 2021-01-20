@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="TEAM 4 - Tomorrowdevs" />
+    <meta name="copyright" content="TEAM 4 - Tomorrowdevs" />
+    <meta name="description" content="Responsive Web App - Collaborative project tomorrowdevs">
+    <meta name="keywords" content="upload, photo upload, camera, photocamera, cloud" />
+    <link rel="canonical" href="https://team4-tomorrowdevs-webapp.netlify.app/" />
+    <meta property="og:title" content="Responsive Web App">
+    <meta property="og:url" content="https://team4-tomorrowdevs-webapp.netlify.app/">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:type" content="Web App">
+    <meta property="og:image" content="./assets/images/open-graph-preview.png">
+    <title>PhotoMatch - Login</title>
+</head>
+
+<body>
+    <div class="site-logo">
+        <h1>PhotoMatch</h1>
+    </div>
+    <section class="login-page">
+        <div class="login-section">
+            <div class="login-section__title">
+                <h3>Welcome!</h3>
+                <p>Sign in to continue</p>
+            </div>
+            <div class="login-section__form">
+                <form class="login-form" action="/landing_page.html" method="">
+                    <div class="login-form__email registration">
+                      <label class="login-section__labels" for="email">Email</label>
+                      <input type="text" class="login-section__input" id="email" name="email" placeholder="Insert here your email" value="">
+                    </div>
+                    <div class="login-form__username registration">
+                        <label class="login-section__labels" for="username">Username</label>
+                        <input type="text" class="login-section__input" id="username" name="username" placeholder="Insert here your username" value="">
+                    </div>
+                    <div class="login-form__password registration">
+                        <label class="login-section__labels" for="password">Password</label>
+                        <input type="password" class="login-section__input" id="password" name="password" placeholder="Insert here your password" value="">
+                    </div>
+                    <input class="login-section__button" type="submit" value="Sign in">
+                    <!--Registration page was created, it is empty though. You can copy-paste this and change it according to Figma's prototype-->
+                    <p>Or <a href="registration.html" target="_blank">register to our service</a> if you do not have an account yet</p>
+
+                </form>
+            </div>
+        </div>
+        <div class="how-it-works">
+            <div class="how-it-works__title">
+                <p>Know what your photo is :)</p>
+            </div>
+            <!--18/01/2021 To be fixed later: this image is not shown because of some webpack issue-->
+            <div class="how-it-works__image-preview">
+                <p>That's a cat!</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

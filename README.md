@@ -23,7 +23,7 @@ https://www.tomorrowdevs.com/
 * We worked through **AGILE METHODOLOGY**. Each task was created as an issue of Github and reported onto a Github Projects board linked to the repository.
 * We tracked time spent on the activities with Toggl tracker
 * We used a Jitsi room for our calls, however, in the spirit of **AGILE METHODOLOGY** we tried to keep all the communications as asynchrounous as possible
-* A Google Sheet was used to manage our daily stand-ups and keep communications asynchronous
+* A standbot on our Slack channel was used to manage our daily stand-ups and keep communications asynchronous
 
 # What were the project's biggest challenges and how did we overcome them?
 
