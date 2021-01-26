@@ -34,6 +34,7 @@ https://www.tomorrowdevs.com/
 * Manuel Alonge (Team Lead)
 * Luca Bertoldi
 * Andrea Santi
+* Ion Vajda
 
 ## Backend
 
