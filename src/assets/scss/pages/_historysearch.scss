@@ -1,0 +1,11 @@
+.history-search {
+    // display: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    @include breakpoint("desktop") {
+        bottom: 40px;
+    }
+}
