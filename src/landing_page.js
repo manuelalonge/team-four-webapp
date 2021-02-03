@@ -27,7 +27,6 @@ const closeMessage = document.querySelector(".close");
 let newImage;
 let errorFormat;
 
-
 (function init() {
   const inputImage = document.querySelector("#images-upload");
   const upload = document.querySelector(".load-images-gallery__submit");
@@ -38,6 +37,8 @@ let errorFormat;
   upload.addEventListener("click", createSlide);
   exitBtn.addEventListener("click", exitSlider);
 })();
+
+const historySearch = document.querySelector(".history-search");
 
 
 // dragAndDrop initialize function
@@ -97,7 +98,7 @@ function selectImage() {
     }
     const image = Array.from(this.files);
   image.forEach(function(element) {
-    // if the file is a jpeg or png take the dataURL andcall the loadImage function else return error 
+    // if the file is a jpeg or png take the dataURL and call the loadImage function else return error 
       if(element.type == "image/jpeg" || element.type == "image/png") {
         const reader = new FileReader();
         reader.addEventListener("load", loadImage);
