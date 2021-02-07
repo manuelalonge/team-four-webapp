@@ -69,7 +69,7 @@ module.exports = {
             // fonts loader
             test: /\.(woff|woff2|eot|ttf)$/,
             type: 'asset/resource'
-          },
+        },
         // video
       // images asset/resouce: take all the images and put them to destination folder images
       { 
@@ -79,7 +79,7 @@ module.exports = {
           filename: 'images/[name].[ext]'
         }
       },
-      { test: /\.(png|svg|jpg|gif|webm|mp4)$/,
+      { test: /\.(png|svg|jpg|gif|webp|mp4)$/,
         use: [
         {
           loader: 'file-loader',
@@ -87,7 +87,7 @@ module.exports = {
             esModule: false,
             name: '[name].[ext]',
             outputPath: 'images/',
-            publicPath: 'images/',
+            publicPath: 'assets/',
           } 
         }
         ]
