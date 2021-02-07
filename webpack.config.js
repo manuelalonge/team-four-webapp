@@ -15,8 +15,7 @@ module.exports = {
   // https://webpack.js.org/concepts/output/
   output: {
     filename: '[name].[hash:20].js',
-    path: buildPath,
-    publicPath:"./"
+    path: buildPath
   },
 
   // https://webpack.js.org/configuration/dev-server/
@@ -34,7 +33,7 @@ module.exports = {
             {
                 loader: MiniCssExtractPlugin.loader,
                 options : {
-                    publicPath:'./src'
+                    publicPath:'./dist'
                 },
             },
             {
@@ -70,16 +69,10 @@ module.exports = {
             test: /\.(woff|woff2|eot|ttf)$/,
             type: 'asset/resource'
         },
+      
         // video
       // images asset/resouce: take all the images and put them to destination folder images
-      { 
-        test: /\.(webp)$/i,
-        type:'asset/resource',
-        generator: {
-          filename: 'images/[name].[ext]'
-        }
-      },
-      { test: /\.(png|svg|jpg|gif|webp|mp4)$/,
+      { test: /\.(png|svg|jpg|gif|webp|mp4|webp)$/,
         use: [
         {
           loader: 'file-loader',
@@ -87,7 +80,7 @@ module.exports = {
             esModule: false,
             name: '[name].[ext]',
             outputPath: 'images/',
-            publicPath: 'assets/',
+            publicPath: 'images/',
           } 
         }
         ]
