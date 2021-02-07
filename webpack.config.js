@@ -15,8 +15,7 @@ module.exports = {
   // https://webpack.js.org/concepts/output/
   output: {
     filename: '[name].[hash:20].js',
-    path: buildPath,
-    publicPath:"./"
+    path: buildPath
   },
 
   // https://webpack.js.org/configuration/dev-server/
