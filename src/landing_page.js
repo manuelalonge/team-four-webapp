@@ -16,6 +16,11 @@ const mainWrapper = document.querySelector(".main-wrapper");
 const slideContainer = document.querySelector(".slideshow-container");
 const exitBtn = document.querySelector(".remove-button");
 
+//History search variables
+const searchHistoryWrapper = document.querySelector(".history-search");
+const searchHistoryButton = document.querySelector(".load-images-history__submit");
+const searchHistorySpan = document.querySelector(".history-search--close");
+
 //upload dropzone variables
 const loadImageSquare = document.querySelector(".load-images-gallery__upload");
 
@@ -276,6 +281,23 @@ function showSlides(n) {
     }
   
   }
+
+
+  /* The following block of instructions is what helps the history search modal to work correctly. 
+  
+  What's the history search modal? Basically the modal where user will be able to find all his/her previous img searches*/
+
+
+  // When the user clicks on the button, the modal opens
+  searchHistoryButton.onclick = function(){
+    searchHistoryWrapper.style.display = 'block';
+  }
+
+  // When the user clicks on the span, the modal closes
+  searchHistorySpan.onclick = function(){
+    searchHistoryWrapper.style.display = 'none';
+  }
+
 
 
 
