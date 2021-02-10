@@ -10,6 +10,13 @@ body {
   }
 }
 
+.login-section__input-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  width: 100%;
+}
+
 .site-logo {
   margin-top: 5 0px;
   color: #fff;
@@ -64,9 +71,8 @@ body {
       .login {
         position: relative;
         small {
-          position: absolute;
-          top: 40px;
-          left: 82px;
+          position: relative;
+          display: block;
           letter-spacing: 1.5px;
         }
       }
