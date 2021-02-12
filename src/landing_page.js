@@ -16,6 +16,11 @@ const mainWrapper = document.querySelector(".main-wrapper");
 const slideContainer = document.querySelector(".slideshow-container");
 const exitBtn = document.querySelector(".remove-button");
 
+//History search variables
+const searchHistoryWrapper = document.querySelector(".history-search");
+const searchHistoryButton = document.querySelector(".load-images-history__submit");
+const searchHistorySpan = document.querySelector(".history-search--close");
+
 //upload dropzone variables
 const loadImageSquare = document.querySelector(".load-images-gallery__upload");
 
@@ -27,7 +32,6 @@ const closeMessage = document.querySelector(".close");
 let newImage;
 let errorFormat;
 
-
 (function init() {
   const inputImage = document.querySelector("#images-upload");
   const upload = document.querySelector(".load-images-gallery__submit");
@@ -38,6 +42,8 @@ let errorFormat;
   upload.addEventListener("click", createSlide);
   exitBtn.addEventListener("click", exitSlider);
 })();
+
+const historySearch = document.querySelector(".history-search");
 
 
 // dragAndDrop initialize function
@@ -97,7 +103,7 @@ function selectImage() {
     }
     const image = Array.from(this.files);
   image.forEach(function(element) {
-    // if the file is a jpeg or png take the dataURL andcall the loadImage function else return error 
+    // if the file is a jpeg or png take the dataURL and call the loadImage function else return error 
       if(element.type == "image/jpeg" || element.type == "image/png") {
         const reader = new FileReader();
         reader.addEventListener("load", loadImage);
@@ -275,6 +281,23 @@ function showSlides(n) {
     }
   
   }
+
+
+  /* The following block of instructions is what helps the history search modal to work correctly. 
+  
+  What's the history search modal? Basically the modal where user will be able to find all his/her previous img searches*/
+
+
+  // When the user clicks on the button, the modal opens
+  searchHistoryButton.onclick = function(){
+    searchHistoryWrapper.style.display = 'block';
+  }
+
+  // When the user clicks on the span, the modal closes
+  searchHistorySpan.onclick = function(){
+    searchHistoryWrapper.style.display = 'none';
+  }
+
 
 
 

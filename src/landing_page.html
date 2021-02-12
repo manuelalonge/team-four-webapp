@@ -38,9 +38,9 @@
 
                 <label for="images-upload" class="load-images-gallery__upload">                  
                 </label>
-                <input type="file" name="files[]" multiple accept="image/*" id="images-upload"/>
+                <input type="file" name="files[]" multiple accept="image/*" id="images-upload" />
                 <input type="submit" class="load-images-gallery__submit" value="Results list">
-                <input type="submit" class="load-images-gallery__submit" value="Search history">
+                <input type="submit" class="load-images-history__submit" value="Search history">
             </form>
 
             <div class="message">
@@ -67,6 +67,20 @@
 
     </div>
     </div>
+
+
+    <!-- History search modal -->
+    <div class="history-search modal">
+        <div class="history-search__list-container">
+            <span class="history-search--close">&times;</span>
+            <ul class="history-search__list">
+                <li class="history-search__list-item">Item 1 <img src="./assets/images/cat-image.webp" alt="Img1"></li>
+                <li class="history-search__list-item">Item 2 <img src="./assets/images/krakow.jpg" alt="Img2"></li>
+                <li class="history-search__list-item">Item 3 <img src="./assets/images/krakow.jpg" alt="Img3"></li>
+            </ul>
+        </div>
+    </div>
+
 </body>
 
 </html>

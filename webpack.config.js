@@ -33,7 +33,7 @@ module.exports = {
             {
                 loader: MiniCssExtractPlugin.loader,
                 options : {
-                    publicPath:'./src'
+                    publicPath:'./dist'
                 },
             },
             {
@@ -68,17 +68,11 @@ module.exports = {
             // fonts loader
             test: /\.(woff|woff2|eot|ttf)$/,
             type: 'asset/resource'
-          },
+        },
+      
         // video
       // images asset/resouce: take all the images and put them to destination folder images
-      { 
-        test: /\.(webp)$/i,
-        type:'asset/resource',
-        generator: {
-          filename: 'images/[name].[ext]'
-        }
-      },
-      { test: /\.(png|svg|jpg|gif|webm|mp4)$/,
+      { test: /\.(png|svg|jpg|gif|webp|mp4|webp)$/,
         use: [
         {
           loader: 'file-loader',
