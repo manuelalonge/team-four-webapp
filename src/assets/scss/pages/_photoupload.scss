@@ -28,12 +28,14 @@
         cursor: pointer;
         max-width: 615px;
         background-color: #29BC6E;
-        min-height: 550px;
+        min-height: 297px;
         border: 1px solid #000;
         border-radius: 10px;
     }
     &__container {
-        width: 50%;
+        width: 615px;
+        height: 297px;
+        margin-left: 40px;
     }
     &__selected {
         display: inline-block;
@@ -106,6 +108,20 @@ input[type="file"] {
     #images-upload {
         display: none;
     }
+}
+
+@media screen and (min-width: 1024px) {
+    .landing-main-wrapper {
+        width: 810px;
+        height: 587px;
+        background: #146CBE;
+        border-radius: 10px;
+    }
+}
+
+.landing-top-container {
+    margin-left: 40px;
+    padding-top: 40px;
 }
 
 @media screen and (max-width: 2560px) {
