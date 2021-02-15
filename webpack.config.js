@@ -9,7 +9,7 @@ module.exports = {
   // https://webpack.js.org/concepts/entry-points/#multi-page-application
   entry: {
     index: './src/index.js',
-    registration:'./src/index.js',
+    registration: './src/registration.js',
     landing_page: './src/landing_page.js',
   },
   // https://webpack.js.org/concepts/output/
