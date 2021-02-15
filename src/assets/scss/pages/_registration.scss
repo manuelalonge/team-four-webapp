@@ -1,8 +1,30 @@
 .login-form {
-    &__email {
-        @include flexSpace;
+  .registration {
+    position: relative;
+
+    &.success input {
+      border: 3px solid #23cc71;
     }
-    .registration {
-        margin-top:10px;
+
+    &.error input {
+      border: 3px solid #e74c3c;
     }
+    small {
+      color: rgb(212, 124, 124);
+      position: relative;
+      display: block;
+      letter-spacing: 1.5px;
+      visibility: hidden;
+      font-weight: 550;
+      font-size: 15px;
+      max-width: 332px;
+    }
+    &.error small {
+      visibility: visible;
+    }
+  }
+  &__email {
+    margin-bottom: 30px;
+    @include flexSpace;
+  }
 }

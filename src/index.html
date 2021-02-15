@@ -29,24 +29,30 @@
             </div>
             <div class="login-section__form">
                 <form class="login-form" action="/landing_page.html" method="">
-
-                    <div class="login-form__username">
+                    <div class="login-form__username login">
                         <label class="login-section__labels" for="username">Username</label>
-                        <input type="text" class="login-section__input" id="username" name="username" placeholder="Insert here your username" value="">
+                        <div class="login-section__input-container">
+                            <input type="text" class="login-section__input" id="username" name="username"
+                                placeholder="Insert here your username" value="">
+                        </div>
                     </div>
-                    <div class="login-form__password">
+                    <div class="login-form__password login">
                         <label class="login-section__labels" for="password">Password</label>
-                        <input type="password" class="login-section__input" id="password" name="password" placeholder="Insert here your password" value="">
+                        <div class="login-section__input-container">
+                            <input type="password" class="login-section__input" id="password" name="password"
+                                placeholder="Insert here your password" value="">
+                        </div>
                     </div>
                     <div class="login-form__psw-recovery">
                         <p>Forgot your password? Click <a class="login-section__psw-recovery-link">here</a></p>
-                        <input class="login-section__psw-recovery-field" type="text" id="email" name="email" placeholder="Insert your e-mail here. We will send you a link to recover your password" value="">
+                        <input class="login-section__psw-recovery-field" type="text" id="email" name="email"
+                            placeholder="Insert your e-mail here. We will send you a link to recover your password"
+                            value="">
                     </div>
-
                     <input class="login-section__button" type="submit" value="Sign in">
                     <!--Registration page was created, it is empty though. You can copy-paste this and change it according to Figma's prototype-->
-                    <p>Or <a href="registration.html" target="_blank">register to our service</a> if you do not have an account yet</p>
-
+                    <p>Or <a href="registration.html" target="_blank">register to our service</a> if you do not have an
+                        account yet</p>
                 </form>
             </div>
         </div>
