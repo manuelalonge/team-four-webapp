@@ -35,12 +35,13 @@ body {
     padding-top: 14px;
     padding-left: 20px;
     background-color: #146cbe;
-    color: #fff;
+    color: #ffffff;
     width: 100%;
     border-radius: 10px;
     margin-bottom: 50px;
     @include breakpoint("desktop") {
-        width: 50%;
+        width: 668px;
+        height: 471px;
         padding-left: 0px;
         margin-bottom: 0;
     }
@@ -132,6 +133,24 @@ body {
     }
     &__psw-recovery--display-block {
         display: block;
+    }
+    &__register-call-to-action {
+        width: 91px;
+        height: 39px;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: left;
+        @include breakpoint("desktop") {
+            width: 416px;
+            height: 19px;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+        }
+    }
+    &__register-link {
+        text-decoration: underline;
+        color: #FFFFFF;
     }
 }
 
