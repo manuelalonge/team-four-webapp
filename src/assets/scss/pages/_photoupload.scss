@@ -33,9 +33,11 @@
         border-radius: 10px;
     }
     &__container {
-        width: 615px;
-        height: 297px;
-        margin-left: 40px;
+        @include breakpoint("desktop") {
+            width: 615px;
+            height: 297px;
+            margin-left: 40px;
+        }
     }
     &__selected {
         display: inline-block;

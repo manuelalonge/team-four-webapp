@@ -8,4 +8,26 @@
     @include breakpoint("desktop") {
         bottom: 40px;
     }
+    &__list {
+        list-style-type: none;
+    }
+    &__list-item {
+        width: 91px;
+        height: 16px;
+        font-size: 10px;
+        color: #FFFFFF;
+    }
+    &__list-container {
+        width: 135px;
+        height: 113px;
+        background: #146CBE;
+        border-radius: 10px;
+        margin-top: 270px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__img {
+        width: 8px;
+        height: 8px;
+    }
 }
