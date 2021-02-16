@@ -68,7 +68,7 @@ function getFieldName(input) {
 
 // Event listeners
 form.addEventListener("submit", function (e) {
-  e.preventDefault();
+  // e.preventDefault();
   checkLength(username, 3, 12);
   isValidEmail(email);
   checkPasswordStrength(password);

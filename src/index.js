@@ -22,5 +22,5 @@ const email = document.getElementById("email");
 
 // Event listeners
 form.addEventListener("submit", function (e) {
-  e.preventDefault();
+  // e.preventDefault();
 });
