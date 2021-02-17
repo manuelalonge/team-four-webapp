@@ -56,9 +56,21 @@
         height: 100%;
     }
     &__submit {
-        background-color: #fff;
-        color: #29BC6E;
-        padding: 20px;
+        background-color: #C4C4C4;
+        font-size: 10px;
+        color: #000;
+        font-weight: bold;
+        width: 97px;
+        line-height: 12px;
+        height: 20px;
+        margin: 30px 11px 0px 0;
+            @include breakpoint("desktop") {
+                font-size: 16px;
+                width: 224px;
+                height: 39px;
+                line-height: 19px;
+                margin: 8px 31px 0px 0;
+            }
     }
 }
 
@@ -274,19 +286,6 @@ img {
     }
 }
 
-.load-images-history__submit,
-.load-images-gallery__submit {
-    background-color: #C4C4C4;
-    font-size: 10px;
-    color: #000;
-    font-weight: bold;
-    width: 97px;
-    line-height: 12px;
-    height: 20px;
-    @include breakpoint("desktop") {
-        font-size: 16px;
-        width: 224px;
-        height: 39px;
-        line-height: 19px;
-    }
+.load-images-history__submit{
+@extend .load-images-gallery__submit;
 }
