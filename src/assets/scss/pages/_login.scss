@@ -10,13 +10,6 @@ body {
     }
 }
 
-.login-section__input-container {
-    display: flex;
-    flex-direction: column;
-    padding-top: 10px;
-    width: 100%;
-}
-
 .site-logo {
     margin-top: 5 0px;
     color: #fff;
@@ -106,33 +99,60 @@ body {
             padding: 10px 0px 10px 20px;
         }
     }
+    &__input-container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        width: 100%;
+    }
     &__button {
         font-size: 11px;
         background-color: #29bc6e;
         color: #fff;
+        width: 104px;
         height: 25px;
         border-radius: 10px;
         border: none;
         margin: 15px 0px 20px 0px;
-        width: 104px;
         @include breakpoint("tablet") {
             width: 100%;
             height: 73px;
             cursor: pointer;
             font-size: 16px;
-            margin-top: 67px;
+        }
+    }
+    &__psw-recovery-call-to-action {
+        width: 148px;
+        height: 12px;
+        font-size: 10px;
+        line-height: 12px;
+        @include breakpoint("desktop") {
+            width: 236px;
+            height: 19px;
+            font-size: 16px;
+            line-height: 19px;
         }
     }
     &__psw-recovery-link {
         text-decoration: underline;
         cursor: pointer;
-        color: blue;
+        color: #FFFFFF;
     }
     &__psw-recovery-field {
         display: none;
     }
     &__psw-recovery--display-block {
         display: block;
+        width: 100px;
+        height: 20px;
+        font-family: Lato;
+        color: #ffff;
+        background: #C4C4C4;
+        border-color: #C4C4C4;
+        @include breakpoint("desktop") {
+            width: 328px;
+            height: 20px;
+        }
     }
     &__register-call-to-action {
         width: 91px;
