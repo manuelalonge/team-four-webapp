@@ -8,4 +8,40 @@
     @include breakpoint("desktop") {
         bottom: 40px;
     }
+    &__list {
+        list-style-type: none;
+    }
+    &__list-item {
+        width: 91px;
+        height: 16px;
+        font-size: 10px;
+        color: #FFFFFF;
+        @include breakpoint("desktop") {
+            width: 264px;
+            font-size: 16px;
+            height: 20px;
+        }
+    }
+    &__list-container {
+        width: 135px;
+        height: 113px;
+        background: #146CBE;
+        border-radius: 10px;
+        margin-top: 270px;
+        margin-left: auto;
+        margin-right: auto;
+        @include breakpoint("desktop") {
+            margin-top: 70px;
+            width: 436px;
+            height: 260px;
+        }
+    }
+    &__img {
+        width: 8px;
+        height: 8px;
+        @include breakpoint("desktop") {
+            width: 24px;
+            height: 24px;
+        }
+    }
 }

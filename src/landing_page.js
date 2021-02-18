@@ -28,13 +28,13 @@ const loadImageSquare = document.querySelector(".load-images-gallery__upload");
 const messageError = document.querySelector(".message");
 const messageText = document.querySelector(".message__text");
 const closeMessage = document.querySelector(".close");
-
+const upload = document.querySelector(".load-images-gallery__submit");
 let newImage;
 let errorFormat;
 
 (function init() {
   const inputImage = document.querySelector("#images-upload");
-  const upload = document.querySelector(".load-images-gallery__submit");
+ 
 
   inputImage.addEventListener("change", selectImage);
   // message error if the button ok is pressed the box disappear
@@ -142,11 +142,17 @@ function loadImage(src) {
       } else {
         newImage.src = this.result;
       }
+    // when the button is clicked and an image is uploaded the button result appear
+      upload.style.display = "inline-block";
     // here you can remove the image you want by clicking on X 
       Array.from(loadImageSquare.children).forEach(function(element) {
           element.querySelector(".removeImage").addEventListener("click", function(e) {
               e.preventDefault();
               element.remove();
+              // when remove button is clicked and the container has 0 elements the result button has display none
+              if(loadImageSquare.children.length == 0) {
+                upload.style.display = "none";
+              }
           });
       });
       closeMessage.addEventListener("click", function() {

@@ -27,13 +27,14 @@ body {
 .login-section {
     padding-top: 14px;
     padding-left: 20px;
-    background-color: #146CBE;
-    color: #fff;
+    background-color: #146cbe;
+    color: #ffffff;
     width: 100%;
     border-radius: 10px;
     margin-bottom: 50px;
     @include breakpoint("desktop") {
-        width: 50%;
+        width: 668px;
+        height: 471px;
         padding-left: 0px;
         margin-bottom: 0;
     }
@@ -61,12 +62,24 @@ body {
         }
         .login-form {
             width: 90%;
+            .login {
+                position: relative;
+                small {
+                    position: relative;
+                    display: block;
+                    letter-spacing: 1.5px;
+                }
+            }
             &__username {
+                margin-bottom: 30px;
                 @include flexSpace;
             }
             &__password {
-                margin-top: 30px;
+                margin-bottom: 30px;
                 @include flexSpace;
+            }
+            &__email>label {
+                margin-right: 30px;
             }
         }
     }
@@ -86,33 +99,78 @@ body {
             padding: 10px 0px 10px 20px;
         }
     }
+    &__input-container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        width: 100%;
+    }
     &__button {
         font-size: 11px;
-        background-color: #29BC6E;
+        background-color: #29bc6e;
         color: #fff;
+        width: 104px;
         height: 25px;
         border-radius: 10px;
         border: none;
         margin: 15px 0px 20px 0px;
-        width: 104px;
         @include breakpoint("tablet") {
             width: 100%;
             height: 73px;
             cursor: pointer;
             font-size: 16px;
-            margin-top: 67px;
+        }
+    }
+    &__psw-recovery-call-to-action {
+        width: 148px;
+        height: 12px;
+        font-size: 10px;
+        line-height: 12px;
+        @include breakpoint("desktop") {
+            width: 236px;
+            height: 19px;
+            font-size: 16px;
+            line-height: 19px;
         }
     }
     &__psw-recovery-link {
         text-decoration: underline;
         cursor: pointer;
-        color: blue;
+        color: #FFFFFF;
     }
     &__psw-recovery-field {
         display: none;
     }
     &__psw-recovery--display-block {
         display: block;
+        width: 100px;
+        height: 20px;
+        font-family: Lato;
+        color: #ffff;
+        background: #C4C4C4;
+        border-color: #C4C4C4;
+        @include breakpoint("desktop") {
+            width: 328px;
+            height: 20px;
+        }
+    }
+    &__register-call-to-action {
+        width: 91px;
+        height: 39px;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: left;
+        @include breakpoint("desktop") {
+            width: 416px;
+            height: 19px;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+        }
+    }
+    &__register-link {
+        text-decoration: underline;
+        color: #FFFFFF;
     }
 }
 
@@ -125,7 +183,7 @@ body {
     }
     &__title {
         color: #fff;
-        background-color: #146CBE;
+        background-color: #146cbe;
         height: 47px;
         display: flex;
         justify-content: center;
@@ -143,7 +201,7 @@ body {
         }
     }
     &__image-preview {
-        background-image: url("./assets/images/cat-image.webp");
+        background-image: url("/src/assets/images/cat-image.webp");
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: 50% 50%;
@@ -155,26 +213,46 @@ body {
             background-size: contain;
             height: 400px;
         }
-        @include breakpoint("desktop") {
+        &__image-preview {
+            background-image: url("./assets/images/cat-image.webp");
+            background-repeat: no-repeat;
             background-size: 100%;
-            font-size: 16px;
-            height: 100%;
-            width: 100%;
-        }
-        p {
-            text-align: center;
-            background-color: #146CBE;
-            display: inline-block;
-            color: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 11px;
-            transform: translate(0px, -50%);
+            background-position: 50% 50%;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
             @include breakpoint("tablet") {
-                margin-top: -100px;
-                padding: 25px;
-                width: 250px;
+                background-size: contain;
+                height: 400px;
+            }
+            @include breakpoint("desktop") {
+                background-size: 100%;
                 font-size: 16px;
+                height: 100%;
+                width: 100%;
+            }
+            p {
+                text-align: center;
+                background-color: #146CBE;
+                display: inline-block;
+                color: #fff;
+                padding: 15px;
+                border-radius: 10px;
+                font-size: 11px;
+                transform: translate(0px, -50%);
+                @include breakpoint("tablet") {
+                    margin-top: -100px;
+                    padding: 25px;
+                    width: 250px;
+                    font-size: 16px;
+                }
+                @include breakpoint("desktop") {
+                    background-size: 100%;
+                    font-size: 16px;
+                    height: 100%;
+                    width: 100%;
+                }
             }
         }
     }
