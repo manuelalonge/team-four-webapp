@@ -24,7 +24,7 @@ body {
 /* Slideshow container */
 
 .main-wrapper {
-    display:none;
+    display: none;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -36,19 +36,20 @@ body {
 }
 
 .slideshow-container {
-    background-color: #146CBE;
+    background-color: transparent;
     width: 184px;
     height: 163px;
+    margin-top: 180px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
-    z-index:2;
+    z-index: 2;
     @include breakpoint("desktop") {
         position: relative;
         width: 517px;
-        height: 247px;
+        height: 217px;
         left: -60px;
-        top: 93px;
+        //top: 93px;
     }
 }
 
@@ -57,8 +58,9 @@ body {
     @include breakpoint("desktop") {
         position: relative;
         width: 517px;
-        height: 247px;
+        height: 217px;
         top: -50px;
+        left: 57px;
     }
 }
 
@@ -67,9 +69,10 @@ body {
     top: 32px;
     width: 184px;
     height: 163px;
+    border-radius: 30px;
     @include breakpoint("desktop") {
         width: 517px;
-        height: 247px;
+        height: 217px;
         top: 50px;
     }
 }
@@ -78,9 +81,11 @@ body {
 /* Next & previous buttons */
 
 .buttons {
-    z-index:1;
+    z-index: 1;
+    margin-top: -50px;
     @include breakpoint("desktop") {
         position: relative;
+        margin-top: -80px;
     }
 }
 
@@ -95,15 +100,16 @@ body {
 }
 
 .next {
-    right: 32px;
+    right: 86px;
     @include breakpoint("desktop") {
-        right: 20%;
+        right: 23%;
     }
 }
+
 .prev {
-    left: 32px;
+    left: 86px;
     @include breakpoint("desktop") {
-        left: 20%;
+        left: 23%;
     }
 }
 
