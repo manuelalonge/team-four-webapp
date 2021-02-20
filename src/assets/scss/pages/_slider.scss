@@ -58,9 +58,10 @@ body {
     @include breakpoint("desktop") {
         position: relative;
         width: 517px;
-        height: 217px;
-        top: -50px;
+        height: 317px;
+        top: -80px;
         left: 57px;
+        object-fit: contain;
     }
 }
 
@@ -72,8 +73,9 @@ body {
     border-radius: 30px;
     @include breakpoint("desktop") {
         width: 517px;
-        height: 217px;
+        height: 317px;
         top: 50px;
+        object-fit: cover;
     }
 }
 
@@ -85,7 +87,7 @@ body {
     margin-top: -50px;
     @include breakpoint("desktop") {
         position: relative;
-        margin-top: -80px;
+        margin-top: -50px;
     }
 }
 
@@ -173,6 +175,8 @@ body {
     @include breakpoint("desktop") {
         width: 30px;
         height: 30px;
+        margin-left: 70px;
+        margin-bottom: 30px;
         img {
             width: 14px;
             height: 13px;
