@@ -56,7 +56,7 @@
         height: 100%;
     }
     &__submit {
-        display:none;
+        display: none;
         background-color: #C4C4C4;
         font-size: 10px;
         color: #000;
@@ -65,13 +65,13 @@
         line-height: 12px;
         height: 20px;
         margin: 30px 11px 0px 0;
-            @include breakpoint("desktop") {
-                font-size: 16px;
-                width: 224px;
-                height: 39px;
-                line-height: 19px;
-                margin: 8px 31px 0px 0;
-            }
+        @include breakpoint("desktop") {
+            font-size: 16px;
+            width: 224px;
+            height: 39px;
+            line-height: 19px;
+            margin: 8px 31px 0px 0;
+        }
     }
 }
 
@@ -139,12 +139,13 @@ input[type="file"] {
     padding-top: 40px;
 }
 
-@media screen and (max-width: 2560px) {
+
+/* @media screen and (max-width: 2560px) {
     .btn__takePhoto {
         @include flexCenter();
         width: 100%;
         padding: 2rem;
-        /* button { DA IMPLEMENTARE ALLA FINE PER RENDERE BOTTONI PIU BELLI ( attualmente va in confilitto con la class button in basso)
+         button { DA IMPLEMENTARE ALLA FINE PER RENDERE BOTTONI PIU BELLI ( attualmente va in conflitto con la class button in basso)
             display: inline-block;
             text-align: center;
             background-color: #4CAF50;
@@ -154,18 +155,18 @@ input[type="file"] {
             color: white;
             font-size: 1.2rem;
             font-weight: 500;
-        } */
+        } 
     }
 }
 
 
-/* @media screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {
     .btn__takePhoto {
         button {
             padding: 1rem 4rem;
         }
     }
-} */
+} 
 
 .section {
     transition: all 3s linear;
@@ -176,7 +177,6 @@ input[type="file"] {
 }
 
 
-/********Camera Button on Mobile - START***********/
 
 @media screen and (max-width: 768px) {
     .btn__takePhoto {
@@ -200,11 +200,6 @@ input[type="file"] {
     }
 }
 
-
-/********Camera Button on Mobile - END***********/
-
-
-/********VIDEO AND IMAGES TAKEN Start ************/
 
 .video__mobile {
     height: auto;
@@ -247,17 +242,11 @@ img {
     display: none!important;
 }
 
-
-/********VIDEO AND IMAGES TAKEN END ************/
-
-
-/*************** Video from destkop to mobile ********/
-
 .landing-page__Only-desktop {
     @media screen and (max-width: 768px) {
         display: none;
     }
-}
+} */
 
 .container-lorem {
     display: none;
@@ -287,7 +276,7 @@ img {
     }
 }
 
-.load-images-history__submit{
-@extend .load-images-gallery__submit;
-display:inline-block;
+.load-images-history__submit {
+    @extend .load-images-gallery__submit;
+    display: inline-block;
 }
